@@ -1,0 +1,37 @@
+.timeline-element {
+
+}
+
+.timeline-element--icon {
+    width: 90px !important;
+    height: 90px !important;
+    margin-left: -45px !important;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: none !important ;
+    border: .3rem solid white;
+}
+
+.timeline-element--icon img {
+    max-width: 75%;
+    max-height: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline;
+}
+
+.timeline-element--text {
+    color: black;
+    margin-left: 150px;
+    border-bottom: .3rem solid #D93425;
+    box-shadow: none !important;
+}
+
+.timeline-element--date {
+    color: white;
+    text-transform: uppercase;
+    top: 23px !important;
+    opacity: .9;
+}

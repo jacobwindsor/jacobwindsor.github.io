@@ -1,0 +1,33 @@
+.knowledge-bar {
+    height: 25px;
+    background-color: #021226;
+    position: relative;
+    z-index: 1;
+    margin-bottom: .4rem;
+    color: white;
+}
+
+.knowledge-bar--inner {
+    margin: 0;
+    background-color: #D93425;
+    height: 100%;
+    position: absolute;
+    z-index:2;
+}
+
+.knowledge-bar--language {
+    left: 0;
+}
+
+.knowledge-bar--percentage {
+    right: 0;
+}
+
+.knowledge-bar--percentage, .knowledge-bar--language {
+    z-index: 3;
+    top:0;
+    padding: 0;
+    position: absolute;
+    margin: 0;
+    padding: 0.2rem .5rem 0 .5rem;
+}
