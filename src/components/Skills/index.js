@@ -7,8 +7,8 @@ import { useInView } from "react-intersection-observer"
 import NextSectionArrow from "../NextSectionArrow"
 import SectionHeading from "../SectionHeading"
 
-const SkillList = ({ children  }) => (
-    <Box align="center" direction="row" gap="large">
+const SkillList = ({ children, size  }) => (
+    <Box align="center" direction={size === "large" ? "row" : "column"} gap="large">
         {children}
     </Box>
 )
@@ -28,8 +28,8 @@ const KnowledgeBar = ({ percentage, language }) => {
     )
 }
 
-const Languages = () => (
-    <SkillList>
+const Languages = ({ size }) => (
+    <SkillList size={size}>
         <Code size="large"/>
         <span>
             <KnowledgeBar percentage={90} language="JavaScript" />
@@ -56,8 +56,8 @@ const Languages = () => (
 // <p>React, jQuery, Angular, Docker, AWS, Django, Flask, Cloud Computing, High-Performance Clusters, MongoDb,  Django. </p>
 // </span>
 
-const Education = () => (
-    <SkillList>
+const Education = ({ size }) => (
+    <SkillList size={size}>
         <Book size="large" />
         <span>
             <p>BSc (<i>cum laude</i>) Maastricht Science Programme, Maastricht University</p>
@@ -75,8 +75,8 @@ const Skills = ({ onNextArrowClick, size }) => (
             wrap
         >
             <Box pad="medium" style={{width: size === "small" ? "100%" : "50%"}}>
-                <Languages />
-                <Education />
+                <Languages size={size} />
+                <Education size={size} />
             </Box>
             <Box pad="medium" style={{width: size === "small" ? "100%" : "50%", textAlign: "center"}} justify="center">
                 <h2>Who am I?</h2>
