@@ -93,9 +93,9 @@ const Card = (props) => {
          case "medium":
             return "75%"
          case "large":
-            return "100%"
+            return "75%"
          default:
-            return "100%"
+            return "75%"
       }
    }
 
