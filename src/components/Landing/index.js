@@ -1,5 +1,5 @@
 import { Box, Avatar, Anchor, Button } from  "grommet"
-import { Github, Linkedin, Mail, Down } from "grommet-icons"
+import { Github, Linkedin, Mail } from "grommet-icons"
 import React from "react"
 import profile from "./profile.jpg"
 import "./index.css"

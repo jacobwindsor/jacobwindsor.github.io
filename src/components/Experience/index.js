@@ -1,5 +1,4 @@
 import React from "react"
-import { Box, Image } from "grommet"
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import wikipathways from "./wikipathways.png"
@@ -11,7 +10,7 @@ import SectionHeading from "../SectionHeading";
 
 const WorkItem = ({ title, subtitle, iconSrc, date, children }) => (
     <VerticalTimelineElement 
-                icon={<img src={iconSrc} />}
+                icon={<img src={iconSrc} alt={title} />}
                 className="timeline-element"
                 iconClassName="timeline-element--icon"
                 dateClassName="timeline-element--date"

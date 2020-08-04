@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Box, Grid, Image, Button } from "grommet"
+import React, { useState } from "react";
+import { Box, Image, Button } from "grommet"
 import { Motion, spring, presets } from "react-motion";
 import SectionHeading from "../SectionHeading";
 import NextSectionArrow from "../NextSectionArrow";

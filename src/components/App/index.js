@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Grommet, Box, ResponsiveContext } from 'grommet';
 import Landing from "../Landing"
 import Experience from "../Experience"
@@ -62,7 +62,7 @@ function App() {
             pad="small"
             background="#181E40"
             fill="vertical"
-            width={size == "small" ? "100%" : "80%"}
+            width={size === "small" ? "100%" : "80%"}
             style={{
               margin: "0 auto"
             }}

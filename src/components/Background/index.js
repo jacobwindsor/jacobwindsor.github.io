@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Motion, spring, presets, StaggeredMotion } from "react-motion"
+import { Motion, spring, presets } from "react-motion"
 
 const Line = ({ x1, y1, x2, y2, color="#1E2759 "}) => 
     <Motion 

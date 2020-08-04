@@ -1,6 +1,6 @@
 import React from "react"
-import { Box, Meter } from "grommet"
-import { Test, Code, Book } from "grommet-icons"
+import { Box } from "grommet"
+import { Code, Book } from "grommet-icons"
 import "./index.css"
 import { Motion, spring, presets } from "react-motion"
 import { useInView } from "react-intersection-observer"
