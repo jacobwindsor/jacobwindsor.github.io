@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, forwardRef } from 'react';
 import { Grommet, Box, ResponsiveContext } from 'grommet';
 import Landing from "../Landing"
 import Experience from "../Experience"
@@ -6,6 +6,7 @@ import Skills from "../Skills"
 import "./index.css";
 import Projects from '../Projects';
 import Background from "../Background"
+import Contact from "../Contact";
 
 const theme = {
   global: {
@@ -17,25 +18,35 @@ const theme = {
   },
 };
 
+const Section = forwardRef(({children }, ref) => 
+  <Box ref={ref} direction="column" align="center" justify="evenly" className="section">
+    {children}
+  </Box>
+)
+
 const Sections = ({ scrollTo, size }) => {
   const skillsSection = useRef(null)
   const projectSection = useRef(null)
   const experienceSection = useRef(null)
+  const contactSection = useRef(null)
 
   return (
     <>
-      <Box direction="column" align="center" justify="evenly" className="section">
+      <Section>
         <Landing onNextArrowClick={() => scrollTo(skillsSection.current.offsetTop)} />
-      </Box>
-      <Box ref={skillsSection} id="skills" direction="column" align="center" justify="evenly" className="section">
+      </Section>
+      <Section ref={skillsSection}>
         <Skills size={size} onNextArrowClick={() => scrollTo(projectSection.current.offsetTop)} />
-      </Box>
-      <Box ref={projectSection} direction="column" align="center" justify="evenly" className="section">
+      </Section>
+      <Section ref={projectSection} >
         <Projects size={size} onNextArrowClick={() => scrollTo(experienceSection.current.offsetTop)} />
-      </Box>
-      <Box ref={experienceSection} direction="column" align="center" justify="evenly" className="section">
-        <Experience size={size} />
-      </Box>
+      </Section>
+      <Section ref={experienceSection} >
+        <Experience size={size} onNextArrowClick={() => scrollTo(contactSection.current.offsetTop)} />
+      </Section>
+      <Section ref={contactSection} >
+        <Contact size={size} />
+      </Section>
     </>
   )
 }

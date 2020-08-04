@@ -7,6 +7,7 @@ import gsoc from "./gsoc.png"
 import abcam from "./abcam.png"
 import crg from "./crg.png"
 import SectionHeading from "../SectionHeading";
+import NextSectionArrow from "../NextSectionArrow";
 
 const WorkItem = ({ title, subtitle, iconSrc, date, children }) => (
     <VerticalTimelineElement 
@@ -23,7 +24,7 @@ const WorkItem = ({ title, subtitle, iconSrc, date, children }) => (
             </VerticalTimelineElement>
 )
 
-const Experience = ({size}) => (
+const Experience = ({size, onNextArrowClick}) => (
     <>
         <SectionHeading heading="Experience" />
         <VerticalTimeline layout={size !== "large" ? "1-column" : "2-columns"}>
@@ -73,6 +74,7 @@ const Experience = ({size}) => (
                     Thesis can be found <a href="goo.gl/vzx9i4">here</a>.</p>
             </WorkItem>
         </VerticalTimeline>
+        <NextSectionArrow onClick={onNextArrowClick} sectionName="Contact" />
     </>
 )
 
