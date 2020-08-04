@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/%7Bportfolio%7D/static/css/main.ae7cdc1b.chunk.css",
+    "main.js": "/%7Bportfolio%7D/static/js/main.96f23737.chunk.js",
+    "main.js.map": "/%7Bportfolio%7D/static/js/main.96f23737.chunk.js.map",
+    "runtime-main.js": "/%7Bportfolio%7D/static/js/runtime-main.f084b5f2.js",
+    "runtime-main.js.map": "/%7Bportfolio%7D/static/js/runtime-main.f084b5f2.js.map",
+    "static/css/2.ac1ab58b.chunk.css": "/%7Bportfolio%7D/static/css/2.ac1ab58b.chunk.css",
+    "static/js/2.0981bdb0.chunk.js": "/%7Bportfolio%7D/static/js/2.0981bdb0.chunk.js",
+    "static/js/2.0981bdb0.chunk.js.map": "/%7Bportfolio%7D/static/js/2.0981bdb0.chunk.js.map",
+    "index.html": "/%7Bportfolio%7D/index.html",
+    "precache-manifest.c2a473a6728fe7ef4fe3117a80a2e094.js": "/%7Bportfolio%7D/precache-manifest.c2a473a6728fe7ef4fe3117a80a2e094.js",
+    "service-worker.js": "/%7Bportfolio%7D/service-worker.js",
+    "static/css/2.ac1ab58b.chunk.css.map": "/%7Bportfolio%7D/static/css/2.ac1ab58b.chunk.css.map",
+    "static/css/main.ae7cdc1b.chunk.css.map": "/%7Bportfolio%7D/static/css/main.ae7cdc1b.chunk.css.map",
+    "static/js/2.0981bdb0.chunk.js.LICENSE.txt": "/%7Bportfolio%7D/static/js/2.0981bdb0.chunk.js.LICENSE.txt",
+    "static/media/MetabMaster.png": "/%7Bportfolio%7D/static/media/MetabMaster.cf39b1f6.png",
+    "static/media/PathwayPresenter.png": "/%7Bportfolio%7D/static/media/PathwayPresenter.7a6150cb.png",
+    "static/media/SQANTI-Explorer.png": "/%7Bportfolio%7D/static/media/SQANTI-Explorer.51d669cf.png",
+    "static/media/abcam.png": "/%7Bportfolio%7D/static/media/abcam.b00df16a.png",
+    "static/media/crg.png": "/%7Bportfolio%7D/static/media/crg.f730112c.png",
+    "static/media/gsoc.png": "/%7Bportfolio%7D/static/media/gsoc.0e89fe00.png",
+    "static/media/jReact.png": "/%7Bportfolio%7D/static/media/jReact.b446f1c5.png",
+    "static/media/profile.jpg": "/%7Bportfolio%7D/static/media/profile.1c559d79.jpg",
+    "static/media/pubchem.png": "/%7Bportfolio%7D/static/media/pubchem.8f801b84.png",
+    "static/media/react.png": "/%7Bportfolio%7D/static/media/react.df70b005.png",
+    "static/media/tmerge.png": "/%7Bportfolio%7D/static/media/tmerge.34007e78.png",
+    "static/media/webpackify.png": "/%7Bportfolio%7D/static/media/webpackify.60d29763.png",
+    "static/media/wikipathways.png": "/%7Bportfolio%7D/static/media/wikipathways.2725e3a2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f084b5f2.js",
+    "static/css/2.ac1ab58b.chunk.css",
+    "static/js/2.0981bdb0.chunk.js",
+    "static/css/main.ae7cdc1b.chunk.css",
+    "static/js/main.96f23737.chunk.js"
+  ]
+}
