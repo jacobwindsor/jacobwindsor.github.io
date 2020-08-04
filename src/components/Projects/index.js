@@ -55,7 +55,7 @@ const CardContentDetails = ({ hidden, heading, body, link, tags}) =>
                      <p className="card--details--body">{body}</p>
                   </div>
                   {
-                     link ? <Button label="Learn More" className="card--details--link" href={link} primary style={{bottom: value.textPosition}} /> : <></>
+                     link ? <Button target="_blank" label="Learn More" className="card--details--link" href={link} primary style={{bottom: value.textPosition}} /> : <></>
                   }
                </>
          }
