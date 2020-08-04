@@ -16,7 +16,7 @@ const Contact = ({ size }) => (
                 <h1>Interested in working with me?</h1>
                 <p>I'm currently available for work. Get in touch if you have a project you'd like to discuss.</p>
             </Box>
-            <Button label="Start a converstation" href="mailto:me@jcbwndsr.com" primary size="large" />
+            <Button label="Start a conversation" href="mailto:me@jcbwndsr.com" primary size="large" />
             <SocialButtons />
         </Box>
     </>
