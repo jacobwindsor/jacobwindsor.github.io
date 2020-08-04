@@ -1,0 +1,25 @@
+.next-section {
+    height: 6rem;
+    overflow: hidden;
+    position: relative
+}
+
+.next-section .next-section--arrow {
+    position: absolute;
+    bottom: 0;
+}
+
+.next-section .next-section--heading {
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+.next-section .next-section--arrow svg {
+    transition: all .2s ease-in-out;
+}
+
+.next-section .next-section--arrow svg:hover {
+    stroke: #D93425;
+    fill: #D93425
+}

@@ -210,7 +210,7 @@ const Projects = ({ onNextArrowClick, ...props }) => (
     </Box>
 
 
-    <NextSectionArrow sectionName="Projects" onClick={onNextArrowClick} />
+    <NextSectionArrow sectionName="Experience" onClick={onNextArrowClick} />
  </>
 )
 

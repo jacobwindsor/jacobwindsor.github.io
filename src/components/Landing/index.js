@@ -1,34 +1,11 @@
-import { Box, Avatar, Anchor, Button } from  "grommet"
-import { Github, Linkedin, Mail } from "grommet-icons"
+import { Box, Avatar, Button } from  "grommet"
 import React from "react"
 import profile from "./profile.jpg"
 import "./index.css"
 import NextSectionArrow from "../NextSectionArrow"
 import SectionHeading from "../SectionHeading"
 import TypeWriter from 'react-typewriter';
-
-const SocialButtons = () => (
-    <Box
-        direction="row"
-        gap="small"
-    >
-        <Anchor
-            icon={<Github/>}
-            href="https://github.com/jacobwindsor"
-            color="white"
-        />
-        <Anchor
-            icon={<Linkedin/>}
-            href="https://www.linkedin.com/in/jcbwndsr/"
-            color="white"
-        />
-        <Anchor
-            icon={<Mail/>}
-            href="mailto:me@jcbwndsr.com"
-            color="white"
-        />
-    </Box>
-)
+import SocialButtons from "../SocialButtons"
 
 const Landing = ({ onNextArrowClick }) => (
     <>
