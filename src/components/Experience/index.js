@@ -7,6 +7,7 @@ import "./index.css"
 import gsoc from "./gsoc.png"
 import abcam from "./abcam.png"
 import crg from "./crg.png"
+import SectionHeading from "../SectionHeading";
 
 const WorkItem = ({ title, subtitle, iconSrc, date, children }) => (
     <VerticalTimelineElement 
@@ -25,8 +26,8 @@ const WorkItem = ({ title, subtitle, iconSrc, date, children }) => (
 
 const Experience = ({size}) => (
     <>
-        <h1>Experience</h1>
-        <VerticalTimeline layout="2-columns" className="timeline">
+        <SectionHeading heading="Experience" />
+        <VerticalTimeline layout={size !== "large" ? "1-column" : "2-columns"}>
             <WorkItem
                 title="Centre for Genomic Regulation"
                 subtitle="RNA Sequencing Analysis tools"

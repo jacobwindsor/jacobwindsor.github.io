@@ -1,5 +1,5 @@
-.timeline-element {
-
+.vertical-timeline--one-column.vertical-timeline::before {
+    left: 42px !important;
 }
 
 .timeline-element--icon {
@@ -10,6 +10,10 @@
     overflow: hidden;
     box-shadow: none !important ;
     border: .3rem solid white;
+}
+
+.vertical-timeline--one-column .timeline-element--icon {
+    margin-left: 0 !important;
 }
 
 .timeline-element--icon img {
@@ -24,14 +28,26 @@
 
 .timeline-element--text {
     color: black;
-    margin-left: 150px;
     border-bottom: .3rem solid #D93425;
     box-shadow: none !important;
+    border-radius: 0;
+}
+
+.vertical-timeline--one-column .timeline-element--text {
+    margin-left: 120px !important;
 }
 
 .timeline-element--date {
-    color: white;
     text-transform: uppercase;
     top: 23px !important;
     opacity: .9;
+    color: white !important;
+}
+
+.vertical-timeline--one-column .timeline-element--date {
+    color: #021226 !important;
+}
+
+.vertical-timeline  .vertical-timeline-element-content-arrow {
+    top: 38px !important;
 }

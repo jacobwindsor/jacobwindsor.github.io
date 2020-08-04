@@ -1,22 +1,32 @@
-.title {
-    font-size: 2.8rem;
-    border-bottom: .3rem solid #D93425;
+.typing {
+  text-align:center;
+  min-height:1.5em;
 }
 
 .subtitle {
     text-transform: uppercase;
     font-family: "monospace";
     overflow: hidden;
-    white-space: nowrap;
-    border-right: .3rem solid #D93425;
-    animation: 
-        typing 3.5s steps(40, end),
-        blink-caret 1s step-end infinite;
+    text-align: center;
+    display: inline;
+
+    /* border-right: .3rem solid #D93425; */
+    /* animation: 
+        typing 3.5s steps(40, end)
+        blink-caret 1s step-end infinite; */
+}
+
+.caret {
+  border-right: .3rem solid #D93425;
+  animation: blink-caret 1s step-end infinite;
+  display: inline;
+  padding-left: .1em;
+  padding-top: .4em;
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from { width: 0; opacity: 0 }
+    to { opacity: 1; width: 100% }
   }
 
 @keyframes blink-caret {

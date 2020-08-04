@@ -2,7 +2,10 @@ import React from "react"
 import { Box, Meter } from "grommet"
 import { Test, Code, Book } from "grommet-icons"
 import "./index.css"
-import dataScience from "./data-science.svg"
+import { Motion, spring, presets } from "react-motion"
+import { useInView } from "react-intersection-observer"
+import NextSectionArrow from "../NextSectionArrow"
+import SectionHeading from "../SectionHeading"
 
 const SkillList = ({ children  }) => (
     <Box align="center" direction="row" gap="large">
@@ -10,13 +13,20 @@ const SkillList = ({ children  }) => (
     </Box>
 )
 
-const KnowledgeBar = ({ percentage, language }) => (
-    <div className="knowledge-bar">
-        <p className="knowledge-bar--language">{language}</p>
-        <span className="knowledge-bar--inner" style={{width: "" + percentage + "%"}}>&nbsp;</span>
-        <p className="knowledge-bar--percentage">{percentage}%</p>
-    </div>
-)
+const KnowledgeBar = ({ percentage, language }) => {
+    const [ref, inView, entry] = useInView({ triggerOnce: true })
+    return (
+        <div className="knowledge-bar" ref={ref}>
+            <p className="knowledge-bar--language">{language}</p>
+            <Motion defaultStyle={{width: 0}} style={{width: inView ? spring(percentage, presets.gentle) : 0 }}>
+                {
+                    value => <span className="knowledge-bar--inner" style={{ width:`${value.width}%`}}>&nbsp;</span>
+                }
+            </Motion>
+            <p className="knowledge-bar--percentage">{percentage}%</p>
+        </div>
+    )
+}
 
 const Languages = () => (
     <SkillList>
@@ -56,24 +66,26 @@ const Education = () => (
     </SkillList>
 )
 
-const Skills = (props) => (
+const Skills = ({ onNextArrowClick, size }) => (
     <>
-        <h1>Skills</h1>
+        <SectionHeading heading="Skills" />
         <Box
             direction="row"
             justify="between"
+            wrap
         >
-            <Box pad="medium" style={{maxWidth:"50%"}}>
+            <Box pad="medium" style={{width: size === "small" ? "100%" : "50%"}}>
                 <Languages />
                 <Education />
             </Box>
-            <Box pad="medium" style={{maxWidth: "50%", textAlign: "center"}} justify="center">
+            <Box pad="medium" style={{width: size === "small" ? "100%" : "50%", textAlign: "center"}} justify="center">
                 <h2>Who am I?</h2>
                 I am passionate about using my scientific background and software engineering experience to advance scientific research.
                 By applying the software engineering practices I have learnt in industry, I am able to write useful, maintainable, and well documented software
                 that will make research easier for years to come, and not just for the lifetime of a PhD.
             </Box>
         </Box>
+        <NextSectionArrow sectionName="Projects" onClick={onNextArrowClick} />
     </>
 )
 
