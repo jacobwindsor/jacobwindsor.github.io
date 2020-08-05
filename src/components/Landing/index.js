@@ -1,23 +1,32 @@
-import { Box, Avatar, Button } from "grommet";
+import { Box, Button, Image } from "grommet";
 import React from "react";
-import profile from "./profile.jpg";
+import profile from "./profile.webp";
+import profileJpg from "./profile.jpg";
 import "./index.css";
 import NextSectionArrow from "../NextSectionArrow";
 import SectionHeading from "../SectionHeading";
 import TypeWriter from "react-typewriter";
 import SocialButtons from "../SocialButtons";
 
+
+const Avatar = ({ imgSrc, fallbackImgSrc }) => (
+  <Box style={{
+    width: "250px",
+    height: "250px",
+    border: "6px solid #021226",
+    borderRadius: "100%",
+    overflow: "hidden"
+  }}>
+    <Image src={imgSrc} fallback={fallbackImgSrc} alt="Jacob Windsor" fit="cover"  />
+  </Box>
+)
+
 const Landing = ({ onNextArrowClick }) => (
   <>
     <Box direction="column" align="center">
       <Avatar
-        size="xlarge"
-        src={profile}
-        style={{
-          width: "250px",
-          height: "250px",
-          border: "6px solid #021226",
-        }}
+        imgSrc={profile}
+        fallbackImgSrc={profileJpg}
       />
       <SectionHeading
         uppercase={false}
