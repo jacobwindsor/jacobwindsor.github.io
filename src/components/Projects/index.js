@@ -222,7 +222,7 @@ const Projects = ({ onNextArrowClick, ...props }) => (
       <Card
         heading="React Aspectral"
         imgSrc={react}
-        body="Simple higher order component that allows for the dynamic resizing of React compontnets to a given aspect ratio."
+        body="Simple higher order component that allows for the dynamic resizing of React components to a given aspect ratio."
         tags={["React", "JavaScript"]}
         link="https://github.com/jacobwindsor/react-aspectral"
         {...props}
