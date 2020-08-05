@@ -8,26 +8,29 @@ import SectionHeading from "../SectionHeading";
 import TypeWriter from "react-typewriter";
 import SocialButtons from "../SocialButtons";
 
-
 const Avatar = ({ imgSrc, fallbackImgSrc }) => (
-  <Box style={{
-    width: "250px",
-    height: "250px",
-    border: "6px solid #021226",
-    borderRadius: "100%",
-    overflow: "hidden"
-  }}>
-    <Image src={imgSrc} fallback={fallbackImgSrc} alt="Jacob Windsor" fit="cover"  />
+  <Box
+    style={{
+      width: "250px",
+      height: "250px",
+      border: "6px solid #021226",
+      borderRadius: "100%",
+      overflow: "hidden",
+    }}
+  >
+    <Image
+      src={imgSrc}
+      fallback={fallbackImgSrc}
+      alt="Jacob Windsor"
+      fit="cover"
+    />
   </Box>
-)
+);
 
 const Landing = ({ onNextArrowClick }) => (
   <>
     <Box direction="column" align="center">
-      <Avatar
-        imgSrc={profile}
-        fallbackImgSrc={profileJpg}
-      />
+      <Avatar imgSrc={profile} fallbackImgSrc={profileJpg} />
       <SectionHeading
         uppercase={false}
         thickness=".3rem"
