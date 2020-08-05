@@ -19,11 +19,12 @@ const NextSectionArrow = ({ sectionName, onClick }) => {
 
     return (
         <Box 
+            alignSelf="center"
             direction="column"
             align="center"
             className="next-section"
             onMouseEnter={() => setShowDetails(true)}
-            onMouseLeave={() => setShowDetails(false)}
+            onMouseLeave={() => setShowDetails(false)}              
         >
             <Heading hidden={!showDetails} sectionName={sectionName} />
             <Anchor 

@@ -1,6 +1,7 @@
 .typing {
   text-align:center;
-  min-height:1.5em;
+  min-height:4.5em;
+  margin-top: .5em;
 }
 
 .subtitle {
@@ -33,13 +34,3 @@
     from, to { border-color: transparent }
     50% { border-color: #D93425; }
   }
-
-.experience-arrow {
-    text-transform: uppercase;
-    flex-direction: column !important;
-    margin-top:3rem
-}
-
-.experience-arrow * {
-    flex-direction: column !important;
-}
