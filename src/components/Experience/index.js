@@ -1,6 +1,7 @@
 import React from "react"
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
+import { Box, Image } from "grommet";
+import { Motion, spring, presets } from "react-motion";
+import { useInView } from "react-intersection-observer"
 import wikipathways from "./wikipathways.png"
 import "./index.css"
 import gsoc from "./gsoc.png"
@@ -9,25 +10,53 @@ import crg from "./crg.png"
 import SectionHeading from "../SectionHeading";
 import NextSectionArrow from "../NextSectionArrow";
 
-const WorkItem = ({ title, subtitle, iconSrc, date, children }) => (
-    <VerticalTimelineElement 
-                icon={<img src={iconSrc} alt={title} />}
-                className="timeline-element"
-                iconClassName="timeline-element--icon"
-                dateClassName="timeline-element--date"
-                textClassName="timeline-element--text"
-                date={date}
+const WorkItem = ({ title, subtitle, iconSrc, date, children, right }) => {
+    const [ref, inView] = useInView({ triggerOnce: true })
+
+    return (
+        <div
+            className="work-item"
+            ref={ref}
+        >
+            <Box className="work-item--image">
+                <Image src={iconSrc} fit="contain" />
+            </Box>
+            <Motion
+                defaultStyle={{offset: -1500}}
+                style={{offset:spring(inView ? 0 : -1500, presets.gentle)}}
             >
-                <h3>{title}</h3>
-                <h4>{subtitle}</h4>
+                { value => 
+                    <div className="work-item--text" style={{[right ? "left": "right"]: value.offset + "px"}}>
+                        <div className="work-item--arrow">&nbsp;</div>
+                        <h3 className="work-item--title">{title}</h3>
+                        <h4 className="work-item--subtitle">{subtitle}</h4>
+                        {children}
+                        <span className="work-item--date" fit="contain">{date}</span>
+                    </div>
+                }
+            </Motion>
+        </div>
+    )
+}
+
+const VerticalTimeline = ({ children, columns = 2 }) => {
+    if (columns > 2 || columns < 1) {
+        throw new Error("Number of columns can only be one or 2.")
+    }
+    return (
+        <div className={`timeline ${columns === 1 ? "one-column": "two-columns"}`}>
+            <div className="line">&nbsp;</div>
+            <Box direction="column">
                 {children}
-            </VerticalTimelineElement>
-)
+            </Box>
+        </div>
+    )
+}
 
 const Experience = ({size, onNextArrowClick}) => (
     <>
         <SectionHeading heading="Experience" />
-        <VerticalTimeline layout={size !== "large" ? "1-column" : "2-columns"}>
+        <VerticalTimeline columns={size !== "large" ? 1 : 2}>
             <WorkItem
                 title="Centre for Genomic Regulation"
                 subtitle="RNA Sequencing Analysis tools"
@@ -45,6 +74,7 @@ const Experience = ({size, onNextArrowClick}) => (
                 subtitle="Software Engineer"
                 date="November 2017 - January-2019"
                 iconSrc={abcam}
+                right={size=="large"}
             >
                 <p>Responsible for the front-end of <a href="http://www.abcam.com">abcam.com</a>. Led a major
                 modernisation of the front-end to use modern JavaScript practices.
@@ -64,7 +94,8 @@ const Experience = ({size, onNextArrowClick}) => (
                 biological pathways on <a href="wikipathways.org">WikiPathways</a> (details: <a href="goo.gl/vZWS2H">here</a>).
                 </p>
             </WorkItem>
-            <WorkItem 
+            <WorkItem
+                right={size=="large"}
                 title="WikiPathways" 
                 subtitle="Improving Educational Capabilities with 'Pathway Stories'" 
                 iconSrc={wikipathways}
