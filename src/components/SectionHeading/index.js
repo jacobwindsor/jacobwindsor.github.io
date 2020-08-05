@@ -19,7 +19,7 @@ const underlineStyle = (thickness) => ({
 })
 
 export default ({ heading, thickness = ".2rem", uppercase = true, fontSize = "2rem" }) => {
-    const [ref, inView, entry] = useInView({ threshold: 1})
+    const [ref, inView] = useInView({ threshold: 1})
     return (
         <span>
             <h1 ref={ref} style={headingStyle(uppercase, fontSize)}>{heading}</h1>
