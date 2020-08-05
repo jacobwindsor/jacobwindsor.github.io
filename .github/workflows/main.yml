@@ -23,6 +23,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Prettier Action
         uses: creyD/prettier_action@v3.0
+        with:
+          prettier_options: --write .
 
       - name: install
         run: yarn install
