@@ -31,13 +31,13 @@ const WorkItem = ({
         <Image src={iconSrc} fallback={iconFallbackSrc} fit="contain" />
       </Box>
       <Motion
-        defaultStyle={{ offset: -1500 }}
-        style={{ offset: spring(inView ? 0 : -1500, presets.gentle) }}
+        defaultStyle={{ offset: -50 }}
+        style={{ offset: spring(inView ? 0 : -50, presets.gentle) }}
       >
         {(value) => (
           <div
             className="work-item--text"
-            style={{ [right ? "left" : "right"]: value.offset + "px" }}
+            style={{ [right ? "left" : "right"]: value.offset + "vw" }}
           >
             <div className="work-item--arrow">&nbsp;</div>
             <h3 className="work-item--title">{title}</h3>
