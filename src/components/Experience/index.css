@@ -1,127 +1,127 @@
 .timeline {
-    position: relative;
-    overflow: hidden;
-    margin: 2rem 1rem;
-    padding-top: 1rem;
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 1rem;
+  padding-top: 1rem;
 }
 
 .timeline .line {
-    height: 100%;
-    background: white;
-    width: .3rem;
-    position: absolute;
-    margin-left: 3rem;
-    transform: translateX(-50%);
-    z-index: 1;
-    margin-top: -1rem;
+  height: 100%;
+  background: white;
+  width: 0.3rem;
+  position: absolute;
+  margin-left: 3rem;
+  transform: translateX(-50%);
+  z-index: 1;
+  margin-top: -1rem;
 }
 
 .timeline.two-columns .line {
-    left: 50%;
-    margin-left: 0;
+  left: 50%;
+  margin-left: 0;
 }
 
-
 .timeline .work-item {
-    z-index:2;
-    margin-bottom: 1rem;
+  z-index: 2;
+  margin-bottom: 1rem;
 }
 
 .timeline .work-item .work-item--image {
-    width: 6rem;
-    height: 6rem;
-    background: white;
-    border-radius: 100%;
-    margin: 0;
-    padding: 0;
-    float:left;
-    overflow: hidden;
+  width: 6rem;
+  height: 6rem;
+  background: white;
+  border-radius: 100%;
+  margin: 0;
+  padding: 0;
+  float: left;
+  overflow: hidden;
 }
 
 .timeline.two-columns .work-item .work-item--image {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .timeline .work-item .work-item--image img {
-    width: 70%;
-    height: auto;
-    margin: 0 auto;
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .timeline .work-item .work-item--text {
-    background: white;
-    margin-left: 9rem;
-    color: black;
-    padding: 1rem;
-    border-bottom: .3rem solid #d93425;
-    position: relative;
+  background: white;
+  margin-left: 9rem;
+  color: black;
+  padding: 1rem;
+  border-bottom: 0.3rem solid #d93425;
+  position: relative;
 }
 
 .timeline.two-columns .work-item--text {
-    width: calc(50% - 9rem);
-    margin-left: 1rem;
+  width: calc(50% - 9rem);
+  margin-left: 1rem;
 }
 
 .timeline.two-columns .work-item:nth-child(odd) .work-item--text {
-    float: right;
-    margin-right: 1rem;
-    margin-left: 0;
+  float: right;
+  margin-right: 1rem;
+  margin-left: 0;
 }
 
 .timeline .work-item--text .work-item--title {
-    margin: 0.3em 0;
+  margin: 0.3em 0;
 }
 
 .timeline .work-item--text .work-item--subtitle {
-    margin-top: 0;
-    font-size: .9em;
-    font-weight: 500;
-    opacity: .8;
+  margin-top: 0;
+  font-size: 0.9em;
+  font-weight: 500;
+  opacity: 0.8;
 }
 
 .timeline .work-item .work-item--text .work-item--arrow {
-    width: 0; 
-    height: 0; 
-    border-top: .5rem solid transparent;
-    border-bottom: .5rem solid transparent;
-    border-right:.5rem solid white; 
-    position: absolute;
-    right: 100%;
-    margin-left: -.5rem;
-    top: 2.5rem;
+  width: 0;
+  height: 0;
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-right: 0.5rem solid white;
+  position: absolute;
+  right: 100%;
+  margin-left: -0.5rem;
+  top: 2.5rem;
 }
 
-.timeline.two-columns .work-item:nth-child(even) .work-item--text .work-item--arrow {
-    transform: rotate(180deg);
-    right: 0;
-    margin-right: -.5rem
+.timeline.two-columns
+  .work-item:nth-child(even)
+  .work-item--text
+  .work-item--arrow {
+  transform: rotate(180deg);
+  right: 0;
+  margin-right: -0.5rem;
 }
 
 .timeline .work-item .work-item--date {
-    text-transform: uppercase;
-    font-weight: 500;
-    opacity: .8;
-} 
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.8;
+}
 
 .timeline.two-columns .work-item--date {
-    position: absolute;
-    top: 2.5rem;
-    color: white;
-    display: inline-block;
-    width: 100%;
-
+  position: absolute;
+  top: 2.5rem;
+  color: white;
+  display: inline-block;
+  width: 100%;
 }
 
 .timeline.two-columns .work-item:nth-child(odd) .work-item--date {
-    right: 0;
-    margin-right: calc(100% + 12rem);
-    text-align: right;
-
+  right: 0;
+  margin-right: calc(100% + 12rem);
+  text-align: right;
 }
 
 .timeline.two-columns .work-item:nth-child(even) .work-item--date {
-    margin-right: calc(-100% - 12rem);
-    right:0;
+  margin-right: calc(-100% - 12rem);
+  right: 0;
 }

@@ -1,97 +1,97 @@
 .card {
-    overflow: hidden;
-    width: 25%;
-    background: transparent;
-    color: black;
-    padding: .4rem;
-    box-sizing: border-box;
+  overflow: hidden;
+  width: 25%;
+  background: transparent;
+  color: black;
+  padding: 0.4rem;
+  box-sizing: border-box;
 }
 
 .card .card--content {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    color: white;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  color: white;
 }
 
 .card .card--content img {
-    height: auto;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  height: auto;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .card .card--content .card--simple--heading {
-    box-sizing: border-box;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -75%);
-    background-color: hsla(0, 100%, 100%, 0.9);
-    padding: .4rem .8rem;
-    border: .2rem solid #D93425;
-    color: #021226;
-    text-align: center;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background-color: hsla(0, 100%, 100%, 0.9);
+  padding: 0.4rem 0.8rem;
+  border: 0.2rem solid #d93425;
+  color: #021226;
+  text-align: center;
 }
 
-.card .card--content .card--overlay, .card .card--content .card--details--text  {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    color: #021226;
-    text-align: center;
-    padding: .5rem;
+.card .card--content .card--overlay,
+.card .card--content .card--details--text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: #021226;
+  text-align: center;
+  padding: 0.5rem;
 }
 
 .card .card--content .card--overlay {
-    background-color:white;
-    opacity: 0.9;
+  background-color: white;
+  opacity: 0.9;
 }
 
 .card .card--content .card--details--text .card--details--heading {
-    border-bottom: .2rem solid #D93425;
-    display: inline-block;
-    margin: 0 0 .6rem 0;
+  border-bottom: 0.2rem solid #d93425;
+  display: inline-block;
+  margin: 0 0 0.6rem 0;
 }
 
 .card .card--content .card--details--text .card--details--tags {
-    list-style: none;
-    font-size: .8rem;
-    margin:0;
-    padding: 0;
-    width: 100%;
-    overflow: hidden;
-    color: white;
-    font-weight: 400;
+  list-style: none;
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  font-weight: 400;
 }
 
 .card .card--content .card--details--text .card--details--tags li {
-    display: inline-block;
-    border: 1px solid #4d4d4d;
-    padding: 0 .3rem;
-    margin: .05rem;
-    border-radius: .2rem;
-    background-color: #1E2759;
+  display: inline-block;
+  border: 1px solid #4d4d4d;
+  padding: 0 0.3rem;
+  margin: 0.05rem;
+  border-radius: 0.2rem;
+  background-color: #1e2759;
 }
 
-
 .card .card--content .card--details--text .card--details--tags li:last-child {
-    border-right: none;
+  border-right: none;
 }
 
 .card .card--content .card--details--text .card--details--heading * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .card .card--content .card--details--link {
-    position: absolute;
-    bottom: 0;
-    left:50%;
-    transform: translatex(-50%);
-    margin: 1rem 0 .6rem 0;
-    text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  margin: 1rem 0 0.6rem 0;
+  text-align: center;
 }
