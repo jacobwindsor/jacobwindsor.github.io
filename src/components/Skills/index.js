@@ -5,7 +5,7 @@ import "./index.css";
 import { Motion, spring, presets } from "react-motion";
 import { useInView } from "react-intersection-observer";
 import NextSectionArrow from "../NextSectionArrow";
-import SectionHeading from '../SectionHeading';
+import SectionHeading from "../SectionHeading";
 
 const SkillList = ({ children, size }) => (
   <Box
