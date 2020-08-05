@@ -3,14 +3,14 @@ import { Box, Image, Button } from "grommet";
 import { Motion, spring, presets } from "react-motion";
 import SectionHeading from "../SectionHeading";
 import NextSectionArrow from "../NextSectionArrow";
-import tmerge from "./images/tmerge.png";
-import sqantiExplorer from "./images/SQANTI-Explorer.png";
-import jReact from "./images/jReact.png";
-import webpackify from "./images/webpackify.png";
-import pathwayPresenter from "./images/PathwayPresenter.png";
-import metabMaster from "./images/MetabMaster.png";
-import pubchem from "./images/pubchem.png";
-import react from "./images/react.png";
+import tmerge from "./images/tmerge.webp";
+import sqantiExplorer from "./images/SQANTI-Explorer.webp";
+import jReact from "./images/jReact.webp";
+import webpackify from "./images/webpackify.webp";
+import pathwayPresenter from "./images/PathwayPresenter.webp";
+import metabMaster from "./images/MetabMaster.webp";
+import pubchem from "./images/pubchem.webp";
+import react from "./images/react.webp";
 import "./index.css";
 
 const CardContentSimple = ({ heading, hidden }) => (

@@ -2,11 +2,11 @@ import React from "react";
 import { Box, Image } from "grommet";
 import { Motion, spring, presets } from "react-motion";
 import { useInView } from "react-intersection-observer";
-import wikipathways from "./wikipathways.png";
+import wikipathways from "./wikipathways.webp";
 import "./index.css";
-import gsoc from "./gsoc.png";
-import abcam from "./abcam.png";
-import crg from "./crg.png";
+import gsoc from "./gsoc.webp";
+import abcam from "./abcam.webp";
+import crg from "./crg.webp";
 import SectionHeading from "../SectionHeading";
 import NextSectionArrow from "../NextSectionArrow";
 
