@@ -105,17 +105,33 @@ const Skills = ({ onNextArrowClick, size }) => (
         justify="center"
         direction="column"
         align="center"
-      > 
+      >
         <div>
           <h2>Who am I?</h2>
-          <p>I am passionate about using my scientific background
-          and years of software engineering experience to advance scientific research. By
-          applying the software engineering practices I have learnt in industry, I
-          am able to write useful, maintainable, and well documented software that
-          will make research easier for years to come.</p>
-          <p>In my spare time I love to climb, build real-world things (not just software), and travel around in my campervan.</p>
+          <p>
+            I am passionate about using my scientific background and years of
+            software engineering experience to advance scientific research. By
+            applying the software engineering practices I have learnt in
+            industry, I am able to write useful, maintainable, and well
+            documented software that will make research easier for years to
+            come.
+          </p>
+          <p>
+            In my spare time I love to climb, build real-world things (not just
+            software), and travel around in my campervan.
+          </p>
         </div>
-        <Box justify="center" style={{width: "100%", height: "auto", maxHeight: "300px", maxWidth: "300px", overflow:"hidden", borderRadius: ".1rem"}}>
+        <Box
+          justify="center"
+          style={{
+            width: "100%",
+            height: "auto",
+            maxHeight: "300px",
+            maxWidth: "300px",
+            overflow: "hidden",
+            borderRadius: ".1rem",
+          }}
+        >
           <Image src={climbing} fallback={climbingJpg} fit="cover" />
         </Box>
       </Box>
