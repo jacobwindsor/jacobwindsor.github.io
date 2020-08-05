@@ -3,20 +3,24 @@ import { Box, Image } from "grommet";
 import { Motion, spring, presets } from "react-motion";
 import { useInView } from "react-intersection-observer";
 import wikipathways from "./wikipathways.webp";
+import wikipathwaysJpg from "./wikipathways.jpg";
 import "./index.css";
 import gsoc from "./gsoc.webp";
+import gsocJpg from "./gsoc.jpg";
 import abcam from "./abcam.webp";
+import abcamJpg from "./abcam.jpg";
 import crg from "./crg.webp";
+import crgJpg from "./crg.jpg";
 import SectionHeading from "../SectionHeading";
 import NextSectionArrow from "../NextSectionArrow";
 
-const WorkItem = ({ title, subtitle, iconSrc, date, children, right }) => {
+const WorkItem = ({ title, subtitle, iconSrc, iconFallbackSrc, date, children, right }) => {
   const [ref, inView] = useInView({ triggerOnce: true });
 
   return (
     <div className="work-item" ref={ref}>
       <Box className="work-item--image">
-        <Image src={iconSrc} fit="contain" />
+        <Image src={iconSrc} fallback={iconFallbackSrc} fit="contain" />
       </Box>
       <Motion
         defaultStyle={{ offset: -1500 }}
@@ -61,6 +65,7 @@ const Experience = ({ size, onNextArrowClick }) => (
         title="Centre for Genomic Regulation"
         subtitle="RNA Sequencing Analysis tools"
         iconSrc={crg}
+        iconFallbackSrc={crgJpg}
         date="September 2019 - September 2020"
       >
         <p>
@@ -75,6 +80,7 @@ const Experience = ({ size, onNextArrowClick }) => (
         subtitle="Software Engineer"
         date="November 2017 - January-2019"
         iconSrc={abcam}
+        iconFallbackSrc={abcamJpg}
         right={size === "large"}
       >
         <p>
@@ -89,6 +95,7 @@ const Experience = ({ size, onNextArrowClick }) => (
         title="Google Summer of Code"
         subtitle="WikiPathways 'Pathway Presenter'"
         iconSrc={gsoc}
+        iconFallbackSrc={gsocJpg}
         date="June 2017 - September 2017"
       >
         <p>
@@ -103,6 +110,7 @@ const Experience = ({ size, onNextArrowClick }) => (
         title="WikiPathways"
         subtitle="Improving Educational Capabilities with 'Pathway Stories'"
         iconSrc={wikipathways}
+        iconFallbackSrc={wikipathwaysJpg}
         date="January 2017 - June 2017"
       >
         <p>

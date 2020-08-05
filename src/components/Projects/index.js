@@ -4,13 +4,22 @@ import { Motion, spring, presets } from "react-motion";
 import SectionHeading from "../SectionHeading";
 import NextSectionArrow from "../NextSectionArrow";
 import tmerge from "./images/tmerge.webp";
+import tmergeJpg from "./images/tmerge.jpg";
 import sqantiExplorer from "./images/SQANTI-Explorer.webp";
+import sqantiExplorerJpg from "./images/SQANTI-Explorer.jpg";
 import jReact from "./images/jReact.webp";
+import jReactJpg from "./images/jReact.jpg";
 import webpackify from "./images/webpackify.webp";
+import webpackifyJpg from "./images/webpackify.jpg";
 import pathwayPresenter from "./images/PathwayPresenter.webp";
+import pathwayPresenterJpg from "./images/PathwayPresenter.jpg";
 import metabMaster from "./images/MetabMaster.webp";
+import metabMasterJpg from "./images/MetabMaster.jpg";
 import pubchem from "./images/pubchem.webp";
+import pubchemJpg from "./images/pubchem.jpg";
 import react from "./images/react.webp";
+import reactJpg from "./images/react.jpg";
+
 import "./index.css";
 
 const CardContentSimple = ({ heading, hidden }) => (
@@ -151,7 +160,7 @@ const Card = (props) => {
           paddingTop: getPadding(),
         }}
       >
-        <Image src={props.imgSrc} fit="contain" />
+        <Image src={props.imgSrc} fallback={props.fallbackSrc} fit="contain" />
         <CardContentDetails hidden={!showDetails} {...props} />
         <CardContentSimple hidden={showDetails} {...props} />
       </div>
@@ -166,6 +175,7 @@ const Projects = ({ onNextArrowClick, ...props }) => (
       <Card
         heading="tmerge"
         imgSrc={tmerge}
+        fallbackSrc={tmergeJpg}
         body="Builds highly accurate transcripts from long-read RNA data. More accurate than competing tools."
         tags={["Bioinformatics", "RNA-Seq", "Python", "R", "Nextflow"]}
         link="https://github.com/jacobwindsor/tmerge"
@@ -174,6 +184,7 @@ const Projects = ({ onNextArrowClick, ...props }) => (
       <Card
         heading="SQANTI Explorer"
         imgSrc={sqantiExplorer}
+        fallbackSrc={sqantiExplorerJpg}
         body="Explore isoform classifications with SQANTI Explorer."
         tags={["Bioinformatics", "R", "Shiny", "Docker", "RNA-Seq", "Plotly"]}
         link="https://github.com/jacobwindsor/SQANTIExplorer"
@@ -182,6 +193,7 @@ const Projects = ({ onNextArrowClick, ...props }) => (
       <Card
         heading="jReact"
         imgSrc={jReact}
+        fallbackSrc={jReactJpg}
         body="Use React style components with jQuery and support down to IE9. Done for abcam."
         tags={["JavaScript", "Functional Programming", "jQuery"]}
         {...props}
@@ -189,6 +201,7 @@ const Projects = ({ onNextArrowClick, ...props }) => (
       <Card
         heading="Webpackify"
         imgSrc={webpackify}
+        fallbackSrc={webpackifyJpg}
         body={"Overhauled abcam.com to use Webpack."}
         tags={["JavaScript", "Webpack"]}
         {...props}
@@ -196,6 +209,7 @@ const Projects = ({ onNextArrowClick, ...props }) => (
       <Card
         heading="Pathway Presenter"
         imgSrc={pathwayPresenter}
+        fallbackSrc={pathwayPresenterJpg}
         body="Create dynamic &amp; beautiful presentations from the pathways on WikiPathways!"
         tags={["Bioinformatics", "JavaScript", "SVG", "React", "Angular"]}
         link="https://github.com/jacobwindsor/pathway-presenter"
@@ -204,6 +218,7 @@ const Projects = ({ onNextArrowClick, ...props }) => (
       <Card
         heading="MetabMaster"
         imgSrc={metabMaster}
+        fallbackSrc={metabMasterJpg}
         body="Create stories for the pathways on WikiPathways! Award winning piece of work."
         tags={["Bioinformatics", "JavaScript", "SVG", "React", "Angular"]}
         link="https://github.com/jacobwindsor/MetabMaster"
@@ -212,6 +227,7 @@ const Projects = ({ onNextArrowClick, ...props }) => (
       <Card
         heading="PubChem Ranker"
         imgSrc={pubchem}
+        fallbackSrc={pubchemJpg}
         body={[
           "Rank compounds by the abundance of information found on PubChem and other databases.",
         ]}
@@ -222,6 +238,7 @@ const Projects = ({ onNextArrowClick, ...props }) => (
       <Card
         heading="React Aspectral"
         imgSrc={react}
+        fallbackSrc={reactJpg}
         body="Simple higher order component that allows for the dynamic resizing of React components to a given aspect ratio."
         tags={["React", "JavaScript"]}
         link="https://github.com/jacobwindsor/react-aspectral"
