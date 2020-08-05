@@ -14,7 +14,15 @@ import crgJpg from "./crg.jpg";
 import SectionHeading from "../SectionHeading";
 import NextSectionArrow from "../NextSectionArrow";
 
-const WorkItem = ({ title, subtitle, iconSrc, iconFallbackSrc, date, children, right }) => {
+const WorkItem = ({
+  title,
+  subtitle,
+  iconSrc,
+  iconFallbackSrc,
+  date,
+  children,
+  right,
+}) => {
   const [ref, inView] = useInView({ triggerOnce: true });
 
   return (
