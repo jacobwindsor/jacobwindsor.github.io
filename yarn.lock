@@ -2943,11 +2943,6 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.5, classnames@^2.2.6:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
-  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
-
 clean-css@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.2.3.tgz#507b5de7d97b48ee53d84adb0160ff6216380f78"
@@ -6764,11 +6759,6 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "^3.0.0"
 
-lodash.throttle@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
-  integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
-
 lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
@@ -8695,7 +8685,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.4"
 
-prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -8896,7 +8886,7 @@ react-dev-utils@^10.2.1:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
-react-dom@^16.0.0, react-dom@^16.13.1, react-dom@^16.2.0:
+react-dom@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
   integrity sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
@@ -8923,16 +8913,7 @@ react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-motion-scroll@0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/react-motion-scroll/-/react-motion-scroll-0.0.6.tgz#5a454779d43d9307b02b2f61ac35098f6d76a201"
-  integrity sha512-v4ULlKP+42Dwxia07zgxUXUdp+BjuEV5YM6mU8TtizJsWZ3E1ciw9uKplChw25/HtSPsSjUK1yaOPDAeHzSBqQ==
-  dependencies:
-    react "^16.0.0"
-    react-dom "^16.0.0"
-    react-motion "^0.5.0"
-
-react-motion@^0.5.0, react-motion@^0.5.2:
+react-motion@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/react-motion/-/react-motion-0.5.2.tgz#0dd3a69e411316567927917c6626551ba0607316"
   integrity sha512-9q3YAvHoUiWlP3cK0v+w1N5Z23HXMj4IF4YuvjvWegWqNPfLXsOBE/V7UvQGpXxHFKRQQcNcVQE31g9SB/6qgQ==
@@ -9001,45 +8982,12 @@ react-scripts@3.4.1:
   optionalDependencies:
     fsevents "2.1.2"
 
-react-scroll@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/react-scroll/-/react-scroll-1.8.0.tgz#0280cbe575e4e1a2f103c7cc6143dd38133573bd"
-  integrity sha512-oZfBXPhcxYPR8elI9tC3ORT6+iqiPPJWslsdR9intbNI5PVSa4XoAfC0I/cB3zk5lxQ/NSexCnT+8RqJL8mSZQ==
-  dependencies:
-    lodash.throttle "^4.1.1"
-    prop-types "^15.7.2"
-
 react-typewriter@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/react-typewriter/-/react-typewriter-0.4.1.tgz#d410ecf8d5caae62c0a62582a6e6cd21b3a1f93c"
   integrity sha1-1BDs+NXKrmLApiWCpubNIbOh+Tw=
   dependencies:
     react "^0.14.7"
-
-react-typing-effect@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/react-typing-effect/-/react-typing-effect-2.0.3.tgz#94ad67031f62efce924403833989c6ef9f877815"
-  integrity sha512-04AdDDvG0HESZjrrMvgtxDkVaxRHDcyGVSAQMcBNxHEseXYvrIHNAoUNF53DRiYoA6G86em0HJuBDqqXfhxy4w==
-  dependencies:
-    classnames "^2.2.5"
-    react "^16.2.0"
-    react-dom "^16.2.0"
-
-react-typist@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/react-typist/-/react-typist-2.0.5.tgz#9830395a73a03e6368e1392ecb98edaa3a648e44"
-  integrity sha512-iZCkeqeegO0TlkTMiH2JD1tvMtY9RrXkRylnAI6m8aCVAUUwNzoWTVF7CKLij6THeOMcUDCznLDDvNp55s+YZA==
-  dependencies:
-    prop-types "^15.5.10"
-
-react-vertical-timeline-component@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/react-vertical-timeline-component/-/react-vertical-timeline-component-3.0.2.tgz#e1c39139b0732c896f6b52b92a3db634784dd5aa"
-  integrity sha512-k56en5bb1WRHjr1B8mXRmnGpiHIWvf4lgL26T0yQJEkHVhj3G5lKGXmJrpdRftLSrvYsDmY428obERAG7hmtjA==
-  dependencies:
-    classnames "^2.2.6"
-    prop-types "^15.7.2"
-    react-intersection-observer "^8.26.2"
 
 react@^0.14.7:
   version "0.14.9"
@@ -9049,7 +8997,7 @@ react@^0.14.7:
     envify "^3.0.0"
     fbjs "^0.6.1"
 
-react@^16.0.0, react@^16.13.1, react@^16.2.0:
+react@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
@@ -10791,11 +10739,6 @@ verror@1.10.0:
     assert-plus "^1.0.0"
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
-
-vivus@^0.4.5:
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/vivus/-/vivus-0.4.5.tgz#61d18c2ac8f48cab5d250fc3df1badfcb32d669a"
-  integrity sha512-dBM5QDcO0JUnoeGUROhMYVBW4Qry637iQ1o6vLDaEVzu0TAQ3tVlzeQlLGYPjegCxcY1nC8FtyTjsZ8rqXVL4Q==
 
 vm-browserify@^1.0.1:
   version "1.1.2"
