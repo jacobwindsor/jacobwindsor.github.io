@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.e59db534.chunk.css",
-    "main.js": "/static/js/main.1b77847d.chunk.js",
-    "main.js.map": "/static/js/main.1b77847d.chunk.js.map",
+    "main.js": "/static/js/main.0570608a.chunk.js",
+    "main.js.map": "/static/js/main.0570608a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ceaf4b5f.js",
     "runtime-main.js.map": "/static/js/runtime-main.ceaf4b5f.js.map",
-    "static/js/2.01168d28.chunk.js": "/static/js/2.01168d28.chunk.js",
-    "static/js/2.01168d28.chunk.js.map": "/static/js/2.01168d28.chunk.js.map",
+    "static/js/2.9e74bc3d.chunk.js": "/static/js/2.9e74bc3d.chunk.js",
+    "static/js/2.9e74bc3d.chunk.js.map": "/static/js/2.9e74bc3d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f722e3e9ac212aefb2b65a811c477354.js": "/precache-manifest.f722e3e9ac212aefb2b65a811c477354.js",
+    "precache-manifest.6188fd2c4391b9d16b451c946b3a2c8a.js": "/precache-manifest.6188fd2c4391b9d16b451c946b3a2c8a.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.e59db534.chunk.css.map": "/static/css/main.e59db534.chunk.css.map",
-    "static/js/2.01168d28.chunk.js.LICENSE.txt": "/static/js/2.01168d28.chunk.js.LICENSE.txt",
+    "static/js/2.9e74bc3d.chunk.js.LICENSE.txt": "/static/js/2.9e74bc3d.chunk.js.LICENSE.txt",
     "static/media/MetabMaster.jpg": "/static/media/MetabMaster.4f89ac7a.jpg",
     "static/media/MetabMaster.webp": "/static/media/MetabMaster.c07d408e.webp",
     "static/media/PathwayPresenter.jpg": "/static/media/PathwayPresenter.8d9f83fd.jpg",
@@ -19,6 +19,8 @@
     "static/media/SQANTI-Explorer.jpg": "/static/media/SQANTI-Explorer.a6363ac7.jpg",
     "static/media/SQANTI-Explorer.webp": "/static/media/SQANTI-Explorer.a8e30aa8.webp",
     "static/media/abcam.webp": "/static/media/abcam.b97a019c.webp",
+    "static/media/climbing.webp": "/static/media/climbing.a5284524.webp",
+    "static/media/climbing.jpg": "/static/media/climbing.b6761945.jpg",
     "static/media/crg.webp": "/static/media/crg.cce280e0.webp",
     "static/media/gsoc.webp": "/static/media/gsoc.73192208.webp",
     "static/media/jReact.webp": "/static/media/jReact.130a5796.webp",
@@ -37,8 +39,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.ceaf4b5f.js",
-    "static/js/2.01168d28.chunk.js",
+    "static/js/2.9e74bc3d.chunk.js",
     "static/css/main.e59db534.chunk.css",
-    "static/js/main.1b77847d.chunk.js"
+    "static/js/main.0570608a.chunk.js"
   ]
 }
