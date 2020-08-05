@@ -14,7 +14,7 @@ const SkillList = ({ children, size  }) => (
 )
 
 const KnowledgeBar = ({ percentage, language }) => {
-    const [ref, inView, entry] = useInView({ triggerOnce: true })
+    const [ref, inView] = useInView({ triggerOnce: true })
     return (
         <div className="knowledge-bar" ref={ref}>
             <p className="knowledge-bar--language">{language}</p>
