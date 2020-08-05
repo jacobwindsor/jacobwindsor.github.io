@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.e59db534.chunk.css",
-    "main.js": "/static/js/main.7196c091.chunk.js",
-    "main.js.map": "/static/js/main.7196c091.chunk.js.map",
+    "main.js": "/static/js/main.216c8c96.chunk.js",
+    "main.js.map": "/static/js/main.216c8c96.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ceaf4b5f.js",
     "runtime-main.js.map": "/static/js/runtime-main.ceaf4b5f.js.map",
     "static/js/2.01168d28.chunk.js": "/static/js/2.01168d28.chunk.js",
     "static/js/2.01168d28.chunk.js.map": "/static/js/2.01168d28.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.ae84ed078741b17613efcbc31e30852c.js": "/precache-manifest.ae84ed078741b17613efcbc31e30852c.js",
+    "precache-manifest.50d3eeebd6f0bb6c0f75d5a2038c4620.js": "/precache-manifest.50d3eeebd6f0bb6c0f75d5a2038c4620.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.e59db534.chunk.css.map": "/static/css/main.e59db534.chunk.css.map",
     "static/js/2.01168d28.chunk.js.LICENSE.txt": "/static/js/2.01168d28.chunk.js.LICENSE.txt",
@@ -18,16 +18,13 @@
     "static/media/PathwayPresenter.webp": "/static/media/PathwayPresenter.f81eedf6.webp",
     "static/media/SQANTI-Explorer.jpg": "/static/media/SQANTI-Explorer.a6363ac7.jpg",
     "static/media/SQANTI-Explorer.webp": "/static/media/SQANTI-Explorer.a8e30aa8.webp",
-    "static/media/abcam.webp": "/static/media/abcam.b396e89a.webp",
-    "static/media/abcam.jpg": "/static/media/abcam.b4f3214a.jpg",
-    "static/media/crg.webp": "/static/media/crg.456a1952.webp",
-    "static/media/crg.jpg": "/static/media/crg.6f272173.jpg",
-    "static/media/gsoc.webp": "/static/media/gsoc.9582ddd5.webp",
-    "static/media/gsoc.jpg": "/static/media/gsoc.b2aa70da.jpg",
+    "static/media/abcam.webp": "/static/media/abcam.b97a019c.webp",
+    "static/media/crg.webp": "/static/media/crg.cce280e0.webp",
+    "static/media/gsoc.webp": "/static/media/gsoc.73192208.webp",
     "static/media/jReact.webp": "/static/media/jReact.130a5796.webp",
     "static/media/jReact.jpg": "/static/media/jReact.b6e7066f.jpg",
-    "static/media/profile.jpg": "/static/media/profile.1c559d79.jpg",
-    "static/media/profile.webp": "/static/media/profile.c14ad2c6.webp",
+    "static/media/profile.webp": "/static/media/profile.3667f029.webp",
+    "static/media/profile.jpg": "/static/media/profile.c193400a.jpg",
     "static/media/pubchem.jpg": "/static/media/pubchem.73462607.jpg",
     "static/media/pubchem.webp": "/static/media/pubchem.940a5898.webp",
     "static/media/react.webp": "/static/media/react.48e415f0.webp",
@@ -36,13 +33,12 @@
     "static/media/tmerge.webp": "/static/media/tmerge.de5b2417.webp",
     "static/media/webpackify.webp": "/static/media/webpackify.14a88841.webp",
     "static/media/webpackify.jpg": "/static/media/webpackify.571bc1d8.jpg",
-    "static/media/wikipathways.jpg": "/static/media/wikipathways.244f83b3.jpg",
-    "static/media/wikipathways.webp": "/static/media/wikipathways.34a03bd5.webp"
+    "static/media/wikipathways.webp": "/static/media/wikipathways.7f0fa36e.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.ceaf4b5f.js",
     "static/js/2.01168d28.chunk.js",
     "static/css/main.e59db534.chunk.css",
-    "static/js/main.7196c091.chunk.js"
+    "static/js/main.216c8c96.chunk.js"
   ]
 }
