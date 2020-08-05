@@ -93,7 +93,7 @@ const Experience = ({ size, onNextArrowClick }) => (
       >
         <p>
           Responsible for the front-end of{" "}
-          <a href="http://www.abcam.com">abcam.com</a>. Led a major
+          <a href="http://www.abcam.com">abcam.com</a>. Initiated a major
           modernisation of the front-end to use modern JavaScript practices.
           Trained other team members in adopting a functional approach to
           JavaScript programming.
