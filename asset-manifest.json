@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.e59db534.chunk.css",
-    "main.js": "/static/js/main.4749acd6.chunk.js",
-    "main.js.map": "/static/js/main.4749acd6.chunk.js.map",
+    "main.js": "/static/js/main.7196c091.chunk.js",
+    "main.js.map": "/static/js/main.7196c091.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ceaf4b5f.js",
     "runtime-main.js.map": "/static/js/runtime-main.ceaf4b5f.js.map",
-    "static/js/2.47b09f79.chunk.js": "/static/js/2.47b09f79.chunk.js",
-    "static/js/2.47b09f79.chunk.js.map": "/static/js/2.47b09f79.chunk.js.map",
+    "static/js/2.01168d28.chunk.js": "/static/js/2.01168d28.chunk.js",
+    "static/js/2.01168d28.chunk.js.map": "/static/js/2.01168d28.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.1de37e1e5eac00e81af523e63f43ec1b.js": "/precache-manifest.1de37e1e5eac00e81af523e63f43ec1b.js",
+    "precache-manifest.ae84ed078741b17613efcbc31e30852c.js": "/precache-manifest.ae84ed078741b17613efcbc31e30852c.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.e59db534.chunk.css.map": "/static/css/main.e59db534.chunk.css.map",
-    "static/js/2.47b09f79.chunk.js.LICENSE.txt": "/static/js/2.47b09f79.chunk.js.LICENSE.txt",
+    "static/js/2.01168d28.chunk.js.LICENSE.txt": "/static/js/2.01168d28.chunk.js.LICENSE.txt",
     "static/media/MetabMaster.jpg": "/static/media/MetabMaster.4f89ac7a.jpg",
     "static/media/MetabMaster.webp": "/static/media/MetabMaster.c07d408e.webp",
     "static/media/PathwayPresenter.jpg": "/static/media/PathwayPresenter.8d9f83fd.jpg",
@@ -27,6 +27,7 @@
     "static/media/jReact.webp": "/static/media/jReact.130a5796.webp",
     "static/media/jReact.jpg": "/static/media/jReact.b6e7066f.jpg",
     "static/media/profile.jpg": "/static/media/profile.1c559d79.jpg",
+    "static/media/profile.webp": "/static/media/profile.c14ad2c6.webp",
     "static/media/pubchem.jpg": "/static/media/pubchem.73462607.jpg",
     "static/media/pubchem.webp": "/static/media/pubchem.940a5898.webp",
     "static/media/react.webp": "/static/media/react.48e415f0.webp",
@@ -40,8 +41,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.ceaf4b5f.js",
-    "static/js/2.47b09f79.chunk.js",
+    "static/js/2.01168d28.chunk.js",
     "static/css/main.e59db534.chunk.css",
-    "static/js/main.4749acd6.chunk.js"
+    "static/js/main.7196c091.chunk.js"
   ]
 }
