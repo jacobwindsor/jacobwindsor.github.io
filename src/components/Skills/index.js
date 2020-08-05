@@ -1,11 +1,13 @@
 import React from "react";
-import { Box } from "grommet";
+import { Box, Image } from "grommet";
 import { Code, Book } from "grommet-icons";
 import "./index.css";
 import { Motion, spring, presets } from "react-motion";
 import { useInView } from "react-intersection-observer";
 import NextSectionArrow from "../NextSectionArrow";
 import SectionHeading from "../SectionHeading";
+import climbing from "./climbing.webp";
+import climbingJpg from "./climbing.jpg";
 
 const SkillList = ({ children, size }) => (
   <Box
@@ -90,23 +92,32 @@ const Skills = ({ onNextArrowClick, size }) => (
   <>
     <SectionHeading heading="Skills" />
     <Box direction="row" justify="between" wrap>
-      <Box pad="medium" style={{ width: size === "small" ? "100%" : "50%" }}>
+      <Box pad="small" style={{ width: size === "small" ? "100%" : "50%" }}>
         <Languages size={size} />
         <Education size={size} />
       </Box>
       <Box
-        pad="medium"
+        pad="small"
         style={{
           width: size === "small" ? "100%" : "50%",
           textAlign: "center",
         }}
         justify="center"
-      >
-        <h2>Who am I?</h2>I am passionate about using my scientific background
-        and software engineering experience to advance scientific research. By
-        applying the software engineering practices I have learnt in industry, I
-        am able to write useful, maintainable, and well documented software that
-        will make research easier for years to come.
+        direction="column"
+        align="center"
+      > 
+        <div>
+          <h2>Who am I?</h2>
+          <p>I am passionate about using my scientific background
+          and years of software engineering experience to advance scientific research. By
+          applying the software engineering practices I have learnt in industry, I
+          am able to write useful, maintainable, and well documented software that
+          will make research easier for years to come.</p>
+          <p>In my spare time I love to climb, build real-world things (not just software), and travel around in my campervan.</p>
+        </div>
+        <Box justify="center" style={{width: "100%", height: "auto", maxHeight: "300px", maxWidth: "300px", overflow:"hidden", borderRadius: ".1rem"}}>
+          <Image src={climbing} fallback={climbingJpg} fit="cover" />
+        </Box>
       </Box>
     </Box>
     <NextSectionArrow sectionName="Projects" onClick={onNextArrowClick} />
