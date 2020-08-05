@@ -78,7 +78,7 @@ const Background = () => {
     useEffect(() => {
         setWidth(window.innerWidth)
         window.addEventListener('resize', () => setWidth(window.innerWidth));
-    })
+    }, [])
     return (
         <div style={{height: "100vh", width: "100vw", position:"fixed", zIndex: -1, overflow: "hidden"}}>
             <svg style={{position: "absolute", width: "100%", height: "100%"}}>
