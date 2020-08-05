@@ -82,7 +82,7 @@ const Skills = ({ onNextArrowClick, size }) => (
                 <h2>Who am I?</h2>
                 I am passionate about using my scientific background and software engineering experience to advance scientific research.
                 By applying the software engineering practices I have learnt in industry, I am able to write useful, maintainable, and well documented software
-                that will make research easier for years to come, and not just for the lifetime of a PhD.
+                that will make research easier for years to come.
             </Box>
         </Box>
         <NextSectionArrow sectionName="Projects" onClick={onNextArrowClick} />
