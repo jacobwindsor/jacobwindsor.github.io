@@ -74,7 +74,7 @@ const Experience = ({size, onNextArrowClick}) => (
                 subtitle="Software Engineer"
                 date="November 2017 - January-2019"
                 iconSrc={abcam}
-                right={size=="large"}
+                right={size==="large"}
             >
                 <p>Responsible for the front-end of <a href="http://www.abcam.com">abcam.com</a>. Led a major
                 modernisation of the front-end to use modern JavaScript practices.
@@ -95,7 +95,7 @@ const Experience = ({size, onNextArrowClick}) => (
                 </p>
             </WorkItem>
             <WorkItem
-                right={size=="large"}
+                right={size==="large"}
                 title="WikiPathways" 
                 subtitle="Improving Educational Capabilities with 'Pathway Stories'" 
                 iconSrc={wikipathways}
