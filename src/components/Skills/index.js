@@ -49,10 +49,12 @@ const Languages = ({ size }) => (
       <KnowledgeBar percentage={90} language="JavaScript" />
       <KnowledgeBar percentage={85} language="Python" />
       <KnowledgeBar percentage={80} language="R" />
+      <KnowledgeBar percentage={90} language="Bash (linux)" />
       <KnowledgeBar percentage={90} language="HTML" />
       <KnowledgeBar percentage={90} language="CSS" />
       <KnowledgeBar percentage={85} language="Node.js" />
       <KnowledgeBar percentage={70} language="Nextflow" />
+      <KnowledgeBar percentage={65} language="Groovy" />
       <KnowledgeBar percentage={50} language="SQL" />
       <KnowledgeBar percentage={40} language="PHP" />
       <KnowledgeBar percentage={40} language="MATLAB" />
