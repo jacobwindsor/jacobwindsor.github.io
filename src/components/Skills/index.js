@@ -62,7 +62,7 @@ const Languages = ({ size }) => (
       <KnowledgeBar percentage={35} language="Java" />
       <p>
         <strong>Other skills: </strong>React, jQuery, Angular, Docker, AWS,
-        Django, Flask, Cloud Computing, High-Performance Clusters, MongoDb,
+        Django, Flask, data analysis, pipelines, CI/CD, Cloud Computing, High-Performance Clusters, MongoDb,
         Django.
       </p>
     </span>
