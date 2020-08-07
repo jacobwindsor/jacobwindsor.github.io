@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7c78f34b0cb9ab5eacc912d68e5e36b8",
+    "revision": "e666bceb11e31ed5bf7d0f2af74d5b05",
     "url": "/index.html"
   },
   {
-    "revision": "e32b3c140befe535989d",
+    "revision": "c5492a5a5e79ca5ec946",
     "url": "/static/css/main.e59db534.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.9e74bc3d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e32b3c140befe535989d",
-    "url": "/static/js/main.145c678d.chunk.js"
+    "revision": "c5492a5a5e79ca5ec946",
+    "url": "/static/js/main.119c0ad6.chunk.js"
   },
   {
     "revision": "5284eec07972ace79c95",
@@ -56,8 +56,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/climbing.a5284524.webp"
   },
   {
-    "revision": "b676194571f1c696a249cc9bc02914ac",
-    "url": "/static/media/climbing.b6761945.jpg"
+    "revision": "b09e9e827ac45d03d2a88d587cddefe0",
+    "url": "/static/media/climbing.b09e9e82.jpg"
   },
   {
     "revision": "cce280e0eccf2203bc83bf2ad617fc20",
