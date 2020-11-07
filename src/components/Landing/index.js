@@ -49,7 +49,7 @@ const Landing = ({ onNextArrowClick }) => (
     </Box>
     <Button
       primary
-      label="HGet in touch"
+      label="Get in touch"
       href="mailto:me@jcbwndsr.com"
       style={{ marginTop: "2rem" }}
     />
