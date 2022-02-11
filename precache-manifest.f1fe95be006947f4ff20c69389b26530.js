@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "065bd0c8933dc48f00618ba688cefcdf",
+    "revision": "ac76f26bd99685877f9b61f361574ad8",
     "url": "/index.html"
   },
   {
-    "revision": "7e0abd328a5deab608d5",
-    "url": "/static/css/main.e59db534.chunk.css"
+    "revision": "930a3fecb85c0e70b2fb",
+    "url": "/static/css/main.7ea3d560.chunk.css"
   },
   {
-    "revision": "e0280fde70c03e1d9fa4",
-    "url": "/static/js/2.9e74bc3d.chunk.js"
+    "revision": "12d95cb302967170081a",
+    "url": "/static/js/2.251e985d.chunk.js"
   },
   {
-    "revision": "5d69dfad55a09b12b700b66bc63d853c",
-    "url": "/static/js/2.9e74bc3d.chunk.js.LICENSE.txt"
+    "revision": "198319526a96cce8ce76ad4ec5fd3e60",
+    "url": "/static/js/2.251e985d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7e0abd328a5deab608d5",
-    "url": "/static/js/main.5d93a0d8.chunk.js"
+    "revision": "930a3fecb85c0e70b2fb",
+    "url": "/static/js/main.fd8712cd.chunk.js"
   },
   {
-    "revision": "5284eec07972ace79c95",
-    "url": "/static/js/runtime-main.ceaf4b5f.js"
+    "revision": "4f2b1704eab49d50853b",
+    "url": "/static/js/runtime-main.19ccc7f6.js"
   },
   {
     "revision": "4f89ac7a07dfbcf7b41170b05bfc0e6d",
@@ -64,6 +64,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/crg.cce280e0.webp"
   },
   {
+    "revision": "25d5193141b6ed8c624f54c8c3311a21",
+    "url": "/static/media/gitlab.25d51931.png"
+  },
+  {
+    "revision": "ece31708e5f1830670c1d67f153193b3",
+    "url": "/static/media/gitlab.ece31708.webp"
+  },
+  {
     "revision": "731922089d3de1e22479ae081fa9f49a",
     "url": "/static/media/gsoc.73192208.webp"
   },
@@ -76,12 +84,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/jReact.b6e7066f.jpg"
   },
   {
+    "revision": "070e29c5c96fd43c0046b751e2a262c8",
+    "url": "/static/media/monitoring.070e29c5.png"
+  },
+  {
+    "revision": "31ec62a2d0cb16db99697e11daaa3f67",
+    "url": "/static/media/monitoring.31ec62a2.webp"
+  },
+  {
     "revision": "1c559d7904a433ed212b0af33804b8d7",
     "url": "/static/media/profile.1c559d79.jpg"
   },
   {
     "revision": "c14ad2c6b86132e8caf4d7f3b586fc57",
     "url": "/static/media/profile.c14ad2c6.webp"
+  },
+  {
+    "revision": "373c4eb68a17f891bfa0dbafa3a3072d",
+    "url": "/static/media/project-catalogue.373c4eb6.png"
   },
   {
     "revision": "73462607b1bcdeed1eb1c5a6783dde12",
