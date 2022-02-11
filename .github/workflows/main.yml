@@ -22,8 +22,9 @@ jobs:
   prettier:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Prettier Action
-        uses: creyD/prettier_action@v3.0
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Prettify code
+        uses: creyD/prettier_action@v4.2
         with:
           prettier_options: --write .
