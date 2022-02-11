@@ -15,10 +15,10 @@ jobs:
       - name: Build
         run: yarn install && yarn build
       - name: Deploy 🚀
-          uses: JamesIves/github-pages-deploy-action@v4.2.3
-          with:
-            branch: gh-pages
-            folder: build 
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        with:
+          branch: gh-pages
+          folder: build 
   prettier:
     runs-on: ubuntu-latest
     steps:
