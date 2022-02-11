@@ -19,6 +19,12 @@ import pubchem from "./images/pubchem.webp";
 import pubchemJpg from "./images/pubchem.jpg";
 import react from "./images/react.webp";
 import reactJpg from "./images/react.jpg";
+import projectCatalogue from "./images/project-catalogue.png";
+import projectCataloguePng from "./images/project-catalogue.png";
+import gitlab from "./images/gitlab.webp";
+import gitlabPng from "./images/gitlab.png"
+import monitoring from "./images/monitoring.webp";
+import monitoringPng from "./images/monitoring.png";
 
 import "./index.css";
 
@@ -172,6 +178,31 @@ const Projects = ({ onNextArrowClick, ...props }) => (
   <>
     <SectionHeading heading="Projects" />
     <Box direction="row" fill wrap>
+      <Card
+        heading="HCA Project Catalogue"
+        imgSrc={projectCatalogue}
+        fallbackSrc={projectCataloguePng}
+        body="A comprehensive list of cellular resolution datasets for the Human Cell Atlas."
+        tags={["Angular", "Riot.js", "JavaScript", "TypeScript", "Java"]}
+        link="https://www.ebi.ac.uk/humancellatlas/project-catalogue/"
+        {...props}
+      />
+      <Card
+        heading="Cluster Monitoring"
+        imgSrc={monitoring}
+        fallbackSrc={monitoringPng}
+        body="High end monitoring solution for EBI allowing the tracking of performance degradation and error logs across the entire range of clusters and environments."
+        tags={["Grafana", "Prometheus", "Loki", "Kubernetes", "Helm"]}
+        {...props}
+      />
+      <Card
+        heading="Advanced CI/CD"
+        imgSrc={gitlab}
+        fallbackSrc={gitlabPng}
+        body="Continuous integration &amp; deployment for EBI bringing the team into the modern era of application deployment. Created new development flows for the team and gave various presentations and Q&amp;A sessions to aid the transition."
+        tags={["GitLab", "Helm", "Kubernetes", "GNU Make", "Bash"]}
+        {...props}
+      />
       <Card
         heading="tmerge"
         imgSrc={tmerge}

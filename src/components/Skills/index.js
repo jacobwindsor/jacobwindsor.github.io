@@ -48,7 +48,9 @@ const Languages = ({ size }) => (
     <span>
       <KnowledgeBar percentage={90} language="JavaScript" />
       <KnowledgeBar percentage={85} language="Python" />
-      <KnowledgeBar percentage={80} language="R" />
+      <KnowledgeBar percentage={75} language="Kubernetes" />
+      <KnowledgeBar percentage={90} language="Git" />
+      <KnowledgeBar percentage={70} language="R" />
       <KnowledgeBar percentage={90} language="Bash (linux)" />
       <KnowledgeBar percentage={90} language="HTML" />
       <KnowledgeBar percentage={90} language="CSS" />
@@ -59,9 +61,9 @@ const Languages = ({ size }) => (
       <KnowledgeBar percentage={40} language="PHP" />
       <KnowledgeBar percentage={40} language="MATLAB" />
       <KnowledgeBar percentage={35} language="C#" />
-      <KnowledgeBar percentage={35} language="Java" />
+      <KnowledgeBar percentage={70} language="Java" />
       <p>
-        <strong>Other skills: </strong>React, jQuery, Angular, Docker, AWS,
+        <strong>Other skills: </strong>React, jQuery, Angular, Docker, AWS, helm,
         Django, Flask, data analysis, pipelines, CI/CD, Cloud Computing,
         High-Performance Clusters, MongoDb, Django.
       </p>
@@ -111,12 +113,9 @@ const Skills = ({ onNextArrowClick, size }) => (
         <div>
           <h2>Who am I?</h2>
           <p>
-            I am passionate about using my scientific background and years of
-            software engineering experience to advance scientific research. By
-            applying the software engineering practices I have learnt in
-            industry, I am able to write useful, maintainable, and well
-            documented software that will make research easier for years to
-            come.
+            I am passionate about using my scientific training and curiosity to develop cutting edge software.
+            By applying the software engineering practices I heave learnt in industry with scientific 
+            thinking, I am able to break down complicated problems and deliver high quality, maintainable, and scalable solutions.
           </p>
           <p>
             In my spare time I love to climb, build real-world things (not just

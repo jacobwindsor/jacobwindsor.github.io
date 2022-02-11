@@ -70,6 +70,21 @@ const Experience = ({ size, onNextArrowClick }) => (
     <SectionHeading heading="Experience" />
     <VerticalTimeline columns={size !== "large" ? 1 : 2}>
       <WorkItem
+        title="Human Cell Atlas"
+        subtitle="Software Engineer | European Bioinformatics Institute (EMBL-EBI)"
+        iconSrc={crg}
+        iconFallbackSrc={crgJpg}
+        date="October 2020 - Present"
+      >
+        <p>
+          Software Engineer for the Data Coordination Platform of 
+          the <a href="https://www.humancellatlas.org/" target ="_blank">Human Cell Atlas</a> - a global project aiming
+          to create comprehensive reference maps of all human cells as a basis for both understanding human health and treating disease.
+          Involved in development across the full stack of components as well as designing and implementing novel applications such as
+          the <a href="https://www.ebi.ac.uk/humancellatlas/project-catalogue/" target="_blank">Project Catalogue</a>.
+        </p>
+      </WorkItem>
+      <WorkItem
         title="Centre for Genomic Regulation"
         subtitle="RNA Sequencing Analysis tools"
         iconSrc={crg}
