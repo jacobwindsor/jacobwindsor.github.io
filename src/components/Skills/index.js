@@ -63,8 +63,8 @@ const Languages = ({ size }) => (
       <KnowledgeBar percentage={35} language="C#" />
       <KnowledgeBar percentage={70} language="Java" />
       <p>
-        <strong>Other skills: </strong>React, jQuery, Angular, Docker, AWS, helm,
-        Django, Flask, data analysis, pipelines, CI/CD, Cloud Computing,
+        <strong>Other skills: </strong>React, jQuery, Angular, Docker, AWS,
+        helm, Django, Flask, data analysis, pipelines, CI/CD, Cloud Computing,
         High-Performance Clusters, MongoDb, Django.
       </p>
     </span>
@@ -113,9 +113,11 @@ const Skills = ({ onNextArrowClick, size }) => (
         <div>
           <h2>Who am I?</h2>
           <p>
-            I am passionate about using my scientific training and curiosity to develop cutting edge software.
-            By applying the software engineering practices I heave learnt in industry with scientific 
-            thinking, I am able to break down complicated problems and deliver high quality, maintainable, and scalable solutions.
+            I am passionate about using my scientific training and curiosity to
+            develop cutting edge software. By applying the software engineering
+            practices I heave learnt in industry with scientific thinking, I am
+            able to break down complicated problems and deliver high quality,
+            maintainable, and scalable solutions.
           </p>
           <p>
             In my spare time I love to climb, build real-world things (not just

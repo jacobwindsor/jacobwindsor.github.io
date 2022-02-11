@@ -77,11 +77,22 @@ const Experience = ({ size, onNextArrowClick }) => (
         date="October 2020 - Present"
       >
         <p>
-          Software Engineer for the Data Coordination Platform of 
-          the <a href="https://www.humancellatlas.org/" target ="_blank">Human Cell Atlas</a> - a global project aiming
-          to create comprehensive reference maps of all human cells as a basis for both understanding human health and treating disease.
-          Involved in development across the full stack of components as well as designing and implementing novel applications such as
-          the <a href="https://www.ebi.ac.uk/humancellatlas/project-catalogue/" target="_blank">Project Catalogue</a>.
+          Software Engineer for the Data Coordination Platform of the{" "}
+          <a href="https://www.humancellatlas.org/" target="_blank">
+            Human Cell Atlas
+          </a>{" "}
+          - a global project aiming to create comprehensive reference maps of
+          all human cells as a basis for both understanding human health and
+          treating disease. Involved in development across the full stack of
+          components as well as designing and implementing novel applications
+          such as the{" "}
+          <a
+            href="https://www.ebi.ac.uk/humancellatlas/project-catalogue/"
+            target="_blank"
+          >
+            Project Catalogue
+          </a>
+          .
         </p>
       </WorkItem>
       <WorkItem

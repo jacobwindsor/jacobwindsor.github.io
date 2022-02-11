@@ -22,7 +22,7 @@ import reactJpg from "./images/react.jpg";
 import projectCatalogue from "./images/project-catalogue.png";
 import projectCataloguePng from "./images/project-catalogue.png";
 import gitlab from "./images/gitlab.webp";
-import gitlabPng from "./images/gitlab.png"
+import gitlabPng from "./images/gitlab.png";
 import monitoring from "./images/monitoring.webp";
 import monitoringPng from "./images/monitoring.png";
 
