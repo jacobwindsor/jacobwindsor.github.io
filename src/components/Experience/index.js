@@ -78,7 +78,11 @@ const Experience = ({ size, onNextArrowClick }) => (
       >
         <p>
           Software Engineer for the Data Coordination Platform of the{" "}
-          <a href="https://www.humancellatlas.org/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.humancellatlas.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Human Cell Atlas
           </a>{" "}
           - a global project aiming to create comprehensive reference maps of
