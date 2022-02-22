@@ -25,6 +25,8 @@ import gitlab from "./images/gitlab.webp";
 import gitlabPng from "./images/gitlab.png";
 import monitoring from "./images/monitoring.webp";
 import monitoringPng from "./images/monitoring.png";
+import portfolio from "./images/portfolio.webp";
+import portfolioPng from "./images/portfolio.png";
 
 import "./index.css";
 
@@ -219,6 +221,15 @@ const Projects = ({ onNextArrowClick, ...props }) => (
         body="Explore isoform classifications with SQANTI Explorer."
         tags={["Bioinformatics", "R", "Shiny", "Docker", "RNA-Seq", "Plotly"]}
         link="https://github.com/jacobwindsor/SQANTIExplorer"
+        {...props}
+      />
+      <Card
+        heading="Portfolio"
+        body="This website. Click the link to view the code."
+        tags={["React", "JavaScript", "GitHub Actions", "SVG", "CSS", "UI"]}
+        link="https://github.com/jacobwindsor/jacobwindsor.github.io"
+        imgSrc={portfolio}
+        fallbackSrc={portfolioPng}
         {...props}
       />
       <Card
