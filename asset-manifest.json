@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.7ea3d560.chunk.css",
-    "main.js": "/static/js/main.690ed191.chunk.js",
-    "main.js.map": "/static/js/main.690ed191.chunk.js.map",
+    "main.js": "/static/js/main.04260bc2.chunk.js",
+    "main.js.map": "/static/js/main.04260bc2.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
-    "static/js/2.cb060462.chunk.js": "/static/js/2.cb060462.chunk.js",
-    "static/js/2.cb060462.chunk.js.map": "/static/js/2.cb060462.chunk.js.map",
+    "static/js/2.85e34345.chunk.js": "/static/js/2.85e34345.chunk.js",
+    "static/js/2.85e34345.chunk.js.map": "/static/js/2.85e34345.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.765e6c066232df58bfb97a43b64e5cb2.js": "/precache-manifest.765e6c066232df58bfb97a43b64e5cb2.js",
+    "precache-manifest.c872e67a4d73be6b18b87c4345756da2.js": "/precache-manifest.c872e67a4d73be6b18b87c4345756da2.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.7ea3d560.chunk.css.map": "/static/css/main.7ea3d560.chunk.css.map",
-    "static/js/2.cb060462.chunk.js.LICENSE.txt": "/static/js/2.cb060462.chunk.js.LICENSE.txt",
+    "static/js/2.85e34345.chunk.js.LICENSE.txt": "/static/js/2.85e34345.chunk.js.LICENSE.txt",
     "static/media/MetabMaster.jpg": "/static/media/MetabMaster.4f89ac7a.jpg",
     "static/media/MetabMaster.webp": "/static/media/MetabMaster.c07d408e.webp",
     "static/media/PathwayPresenter.jpg": "/static/media/PathwayPresenter.8d9f83fd.jpg",
@@ -22,6 +22,8 @@
     "static/media/climbing.webp": "/static/media/climbing.a5284524.webp",
     "static/media/climbing.jpg": "/static/media/climbing.b09e9e82.jpg",
     "static/media/crg.webp": "/static/media/crg.cce280e0.webp",
+    "static/media/embl-ebi.png": "/static/media/embl-ebi.38cba258.png",
+    "static/media/embl-ebi.webp": "/static/media/embl-ebi.6471022b.webp",
     "static/media/gitlab.png": "/static/media/gitlab.25d51931.png",
     "static/media/gitlab.webp": "/static/media/gitlab.ece31708.webp",
     "static/media/gsoc.webp": "/static/media/gsoc.73192208.webp",
@@ -46,8 +48,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.cb060462.chunk.js",
+    "static/js/2.85e34345.chunk.js",
     "static/css/main.7ea3d560.chunk.css",
-    "static/js/main.690ed191.chunk.js"
+    "static/js/main.04260bc2.chunk.js"
   ]
 }
