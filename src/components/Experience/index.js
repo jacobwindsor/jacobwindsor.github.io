@@ -11,6 +11,8 @@ import abcam from "./abcam.webp";
 import abcamJpg from "./abcam.jpg";
 import crg from "./crg.webp";
 import crgJpg from "./crg.jpg";
+import ebiPng from "./embl-ebi.png";
+import ebi from "./embl-ebi.webp";
 import SectionHeading from "../SectionHeading";
 import NextSectionArrow from "../NextSectionArrow";
 
@@ -72,8 +74,8 @@ const Experience = ({ size, onNextArrowClick }) => (
       <WorkItem
         title="Human Cell Atlas"
         subtitle="Software Engineer | European Bioinformatics Institute (EMBL-EBI)"
-        iconSrc={crg}
-        iconFallbackSrc={crgJpg}
+        iconSrc={ebi}
+        iconFallbackSrc={ebiPng}
         date="October 2020 - Present"
       >
         <p>
