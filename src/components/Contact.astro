@@ -4,55 +4,56 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Mail, Github, Linkedin } from 'lucide-react';
 ---
 
-<section id="contact" class="py-20 px-4 bg-background/50">
+<section id="contact" class="py-20 px-6 lg:px-8 bg-background">
   <div class="container mx-auto max-w-4xl">
     <div class="text-center mb-16">
-      <h2 class="text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+      <h2 class="text-4xl lg:text-5xl font-semibold mb-4 text-foreground tracking-tight">
         Get in Touch
       </h2>
-      <div class="w-24 h-1 bg-primary rounded-full mx-auto mb-6"></div>
-      <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+      <div class="w-12 h-px bg-primary mx-auto mb-6"></div>
+      <p class="text-base text-muted-foreground max-w-2xl mx-auto font-light">
         Interested in building scalable solutions for life sciences? Let's connect.
       </p>
     </div>
 
-    <Card className="border-2 bg-card/50 backdrop-blur-sm">
-      <CardContent className="p-8 lg:p-12">
+    <Card className="border border-border/50 bg-card">
+      <CardContent className="p-8 lg:p-10">
         <div class="flex flex-col items-center gap-8">
-          <div class="text-center space-y-4">
-            <p class="text-lg text-muted-foreground leading-relaxed">
+          <div class="text-center">
+            <p class="text-sm text-muted-foreground leading-relaxed font-light max-w-xl">
               I'm always open to discussing technical challenges, scalable architecture, 
               and opportunities to build impactful solutions in life sciences.
             </p>
           </div>
 
-          <div class="flex flex-wrap items-center justify-center gap-4">
-            <Button size="lg" className="text-lg px-8" asChild>
+          <div class="flex flex-wrap items-center justify-center gap-2.5">
+            <Button size="lg" className="px-7" asChild>
               <a href="mailto:me@jcbwndsr.com">
-                <Mail client:load className="mr-2 h-5 w-5" />
-              Email Me
-            </a>
-          </Button>
+                <Mail client:load className="mr-2 h-4 w-4" />
+                Contact via Email
+              </a>
+            </Button>
           </div>
 
-          <div class="flex items-center gap-6 pt-8 border-t border-border">
-            <a 
-              href="https://github.com/jacobwindsor" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Github client:load className="w-5 h-5" />
-              <span>GitHub</span>
-            </a>
+          <div class="flex items-center gap-3 pt-6 border-t border-border/50">
             <a 
               href="https://www.linkedin.com/in/jcbwndsr/" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+              class="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm font-medium"
             >
-              <Linkedin client:load className="w-5 h-5" />
+              <Linkedin client:load className="w-4 h-4" />
               <span>LinkedIn</span>
+            </a>
+            <span class="text-muted-foreground/30">·</span>
+            <a 
+              href="https://github.com/jacobwindsor" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm font-medium"
+            >
+              <Github client:load className="w-4 h-4" />
+              <span>GitHub</span>
             </a>
           </div>
         </div>
