@@ -1,0 +1,44 @@
+---
+import '../styles/globals.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "Jacob Windsor - Technical Leader | Life Sciences Engineering", 
+  description = "Technical leader with years of experience building scalable engineering solutions in the life sciences. Specializing in bioinformatics, data platforms, and scientific software." 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#020817" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <meta name="robots" content="index, follow" />
+    <title>{title}</title>
+    <slot name="head" />
+  </head>
+  <body class="antialiased bg-background text-foreground">
+    <slot />
+    <!-- Simple analytics tracking -->
+    <script
+      async
+      defer
+      src="https://scripts.simpleanalyticscdn.com/latest.js"
+    ></script>
+    <noscript
+      ><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
+    /></noscript>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+---
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Calendar, MapPin } from 'lucide-react';
+
+interface ExperienceItem {
+  title: string;
+  company: string;
+  location: string;
+  startDate: string;
+  endDate: string | null; // null means "Present"
+  description: string;
+  tags: string[];
+  links?: Array<{ text: string; url: string }>;
+}
+
+const experiences: ExperienceItem[] = [
+  {
+    title: 'Technical Lead',
+    company: 'Axiomatic_AI',
+    location: 'Barcelona, Spain',
+    startDate: 'Feb 2025',
+    endDate: null, // Present
+    description: 'Leading a cross-functional engineering team building Axiomatic\'s AI platform to accelerate scientific research. Combining AI-driven tools with classical software engineering practices such as Domain-Driven Design to drive rapid innovation. Leading the development and deployment of AI & agentic solutions from MVP to production.',
+    tags: [
+      'Technical Leadership',
+      'AI/ML',
+      'MLOps',
+      'Domain-Driven Design',
+      'Software Infrastructure',
+      'Team Management'
+    ]
+  },
+  {
+    title: 'Senior Software Engineer',
+    company: 'Qualifyze',
+    location: 'Barcelona, Spain',
+    startDate: 'Jun 2022',
+    endDate: 'Sep 2024',
+    description: 'Architected and developed scalable backend systems for a pharmaceutical quality management platform. Applied domain-driven design and hexagonal architecture principles to build maintainable, high-performance solutions. Mentored team members on best practices and architectural patterns.',
+    tags: [
+      'Backend Development',
+      'Domain-Driven Design',
+      'Hexagonal Architecture',
+      'TypeScript',
+      'NestJS',
+      'React'
+    ]
+  },
+  {
+    title: 'Software Engineer',
+    company: 'European Bioinformatics Institute (EMBL-EBI)',
+    location: 'Hinxton, England, United Kingdom',
+    startDate: 'Jul 2020',
+    endDate: 'Jun 2022',
+    description: 'Architected and built the <a href="https://www.humancellatlas.org/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">Human Cell Atlas</a> Data Coordination Platform, enabling the ingestion of terabytes of genomic data from laboratories worldwide. Designed horizontally scalable applications using microservice architecture. Initiated and led the modernization of Git workflows and CI/CD processes adopted across the organization.',
+    tags: [
+      'Full-Stack Development',
+      'Microservices',
+      'Kubernetes',
+      'DevOps',
+      'TypeScript',
+      'Java',
+      'Angular',
+      'Python'
+    ]
+  },
+  {
+    title: 'Masters Degree Intern',
+    company: 'Centre for Genomic Regulation',
+    location: 'Barcelona, Spain',
+    startDate: 'Oct 2019',
+    endDate: 'Jul 2020',
+    description: 'Developed bioinformatics tools for third-generation sequencing platforms, including <a href="https://github.com/jacobwindsor/tmerge" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">tmerge</a>, to improve transcriptome analysis accuracy. Designed and implemented computational pipelines using advanced algorithms with Python, Nextflow, R, Snakemake, and Shiny.',
+    tags: [
+      'Bioinformatics',
+      'Python',
+      'R',
+      'Nextflow',
+      'Snakemake',
+      'RNA-Seq Analysis'
+    ]
+  },
+  {
+    title: 'Software Engineer',
+    company: 'Abcam',
+    location: 'Cambridge, United Kingdom',
+    startDate: 'Nov 2017',
+    endDate: 'Dec 2018',
+    description: 'Developed front-end solutions for <a href="http://www.abcam.com" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">abcam.com</a>, serving millions of researchers worldwide. Led a comprehensive front-end modernization initiative, migrating the codebase to Webpack, Babel, and contemporary JavaScript tooling. Established functional programming practices and mentored team members on modern JavaScript development.',
+    tags: [
+      'Frontend Development',
+      'JavaScript',
+      'Webpack',
+      'Functional Programming',
+      'Team Training'
+    ]
+  }
+];
+---
+
+<section id="experience" class="py-20 px-6 lg:px-8 bg-background">
+  <div class="container mx-auto max-w-6xl">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl lg:text-5xl font-semibold mb-4 text-foreground tracking-tight">
+        Experience
+      </h2>
+      <div class="w-12 h-px bg-primary mx-auto mb-6"></div>
+      <p class="text-base text-muted-foreground max-w-2xl mx-auto font-light">
+        Building scalable engineering solutions in life sciences
+      </p>
+    </div>
+
+            <!-- Timeline Container -->
+            <div class="relative">
+              <!-- Timeline Line - Only visible on desktop -->
+              <div class="hidden lg:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-border/40"></div>
+
+              <!-- Timeline Items -->
+              <div class="space-y-10 lg:space-y-12">
+                {experiences.map((experience, index) => {
+                  const isCurrent = experience.endDate === null;
+                  const isRight = index % 2 === 0; // Alternate: right, left, right, ...
+                  const delayClass = index === 0 ? '' : index === 1 ? 'timeline-item-delay-1' : 'timeline-item-delay-2';
+                  
+                  return (
+                    <div class={`relative flex items-center timeline-item ${delayClass}`}>
+                      <!-- Timeline Dot -->
+                      <div class={`hidden lg:flex absolute left-1/2 top-1/2 z-10 w-3 h-3 rounded-full border-2 border-background timeline-dot ${isCurrent ? 'bg-primary' : 'bg-border/60'}`}></div>
+              
+              <!-- Content Card -->
+              <div class={`w-full lg:w-[calc(50%-2rem)] ${isRight ? 'lg:ml-auto lg:pl-8' : 'lg:pr-8'}`}>
+                <Card className="border border-border/50 hover:border-primary/30 transition-colors bg-card">
+                  <CardHeader>
+                    <div class="space-y-3">
+                      <div class="flex items-start justify-between gap-4">
+                        <div class="flex-1">
+                          {isCurrent && (
+                            <div class="flex items-center gap-2 mb-1.5">
+                              <span class="text-xs font-medium text-primary uppercase tracking-wide">Present</span>
+                            </div>
+                          )}
+                          <CardTitle className="text-lg font-semibold mb-1">{experience.title}</CardTitle>
+                          <CardDescription className="text-sm font-medium text-foreground/80">
+                            {experience.company}
+                          </CardDescription>
+                        </div>
+                      </div>
+                      <div class="flex flex-wrap items-center gap-4 text-sm text-muted-foreground pt-2 border-t border-border/50">
+                        <div class="flex items-center gap-2">
+                          <Calendar client:load className="w-3.5 h-3.5" />
+                          <span>{experience.startDate} - {isCurrent ? 'Present' : experience.endDate}</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <MapPin client:load className="w-3.5 h-3.5" />
+                          <span>{experience.location}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p class="text-sm text-muted-foreground leading-relaxed font-light" set:html={experience.description} />
+                    <div class="flex flex-wrap gap-2">
+                      {experience.tags.map((tag) => (
+                        <Badge variant="secondary" className="text-xs">{tag}</Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Smooth scroll animations for timeline items
+  document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observe all timeline items
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach(item => {
+      observer.observe(item);
+    });
+  });
+</script>
+
+<style>
+  .timeline-item {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .timeline-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Staggered delays for sequential animation */
+  .timeline-item-delay-1 {
+    transition-delay: 0ms;
+  }
+
+  .timeline-item-delay-1.is-visible {
+    transition-delay: 150ms;
+  }
+
+  .timeline-item-delay-2 {
+    transition-delay: 0ms;
+  }
+
+  .timeline-item-delay-2.is-visible {
+    transition-delay: 300ms;
+  }
+
+  /* Timeline dot animation */
+  .timeline-dot {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .timeline-item.is-visible .timeline-dot {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition-delay: 0.3s;
+  }
+</style>
+
