@@ -1,0 +1,69 @@
+---
+interface Props {
+  heading: string;
+  thickness?: string;
+  uppercase?: boolean;
+  fontSize?: string;
+}
+
+const { 
+  heading, 
+  thickness = "0.2rem", 
+  uppercase = true, 
+  fontSize = "2rem" 
+} = Astro.props;
+---
+
+<div class="section-heading">
+  <h1 class="heading" style={`font-size: ${fontSize}; text-transform: ${uppercase ? 'uppercase' : 'capitalize'}`}>
+    {heading}
+  </h1>
+  <div class="underline-container">
+    <div class="underline" style={`border-bottom: ${thickness} solid #D93425; height: ${thickness}`}></div>
+  </div>
+</div>
+
+<script>
+  // Animate underline on viewport entry
+  document.addEventListener('DOMContentLoaded', () => {
+    const headings = document.querySelectorAll('.section-heading');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const underline = entry.target.querySelector('.underline') as HTMLElement;
+          if (underline) {
+            underline.style.width = '100%';
+          }
+        }
+      });
+    }, { threshold: 1 });
+
+    headings.forEach(heading => observer.observe(heading));
+  });
+</script>
+
+<style>
+  .section-heading {
+    width: 100%;
+    text-align: center;
+  }
+
+  .heading {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .underline-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .underline {
+    display: inline-block;
+    width: 0;
+    transition: width 0.8s ease-out;
+  }
+</style>
+

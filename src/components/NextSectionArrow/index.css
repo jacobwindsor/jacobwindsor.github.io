@@ -2,24 +2,40 @@
   height: 6rem;
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.next-section .next-section--arrow {
+.next-section--arrow {
   position: absolute;
   bottom: 0;
-}
-
-.next-section .next-section--heading {
-  text-transform: uppercase;
-  padding: 0;
-  margin: 0;
-}
-
-.next-section .next-section--arrow svg {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
   transition: all 0.2s ease-in-out;
 }
 
-.next-section .next-section--arrow svg:hover {
+.next-section--arrow:hover {
+  color: #d93425;
+  transform: translateY(4px);
+}
+
+.next-section--heading {
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  transition: margin-top 0.3s ease-out;
+}
+
+.next-section--arrow svg {
+  transition: all 0.2s ease-in-out;
+}
+
+.next-section--arrow:hover svg {
   stroke: #d93425;
   fill: #d93425;
 }

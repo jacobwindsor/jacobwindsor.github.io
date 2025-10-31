@@ -10,11 +10,6 @@
   overflow: hidden;
   text-align: center;
   display: inline;
-
-  /* border-right: .3rem solid #D93425; */
-  /* animation: 
-        typing 3.5s steps(40, end)
-        blink-caret 1s step-end infinite; */
 }
 
 .caret {
@@ -23,6 +18,10 @@
   display: inline;
   padding-left: 0.1em;
   padding-top: 0.4em;
+}
+
+.caret.visible {
+  border-color: #d93425;
 }
 
 @keyframes typing {

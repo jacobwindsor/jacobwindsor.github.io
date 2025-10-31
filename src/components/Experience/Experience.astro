@@ -1,0 +1,313 @@
+---
+import SectionHeading from '../SectionHeading/SectionHeading';
+import NextSectionArrow from '../NextSectionArrow/NextSectionArrow';
+import WorkItem from './WorkItem';
+import './index.css';
+---
+
+import wikipathways from './wikipathways.webp';
+import wikipathwaysJpg from './wikipathways.jpg';
+import gsoc from './gsoc.webp';
+import gsocJpg from './gsoc.jpg';
+import abcam from './abcam.webp';
+import abcamJpg from './abcam.jpg';
+import crg from './crg.webp';
+import crgJpg from './crg.jpg';
+import ebiPng from './embl-ebi.png';
+import ebi from './embl-ebi.webp';
+---
+
+<SectionHeading heading="Experience" />
+<div class="timeline two-columns">
+  <div class="line">&nbsp;</div>
+  <div class="timeline-content">
+    <WorkItem
+      client:load
+      title="Human Cell Atlas"
+      subtitle="Software Engineer | European Bioinformatics Institute (EMBL-EBI)"
+      iconSrc={ebi}
+      iconFallbackSrc={ebiPng}
+      date="October 2020 - Present"
+    >
+      <p>
+        Software Engineer for the Data Coordination Platform of the{" "}
+        <a
+          href="https://www.humancellatlas.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Human Cell Atlas
+        </a>{" "}
+        - a global project aiming to create comprehensive reference maps of
+        all human cells as a basis for both understanding human health and
+        treating disease. Involved in development across the full stack of
+        components as well as designing and implementing novel applications
+        such as the{" "}
+        <a
+          href="https://www.ebi.ac.uk/humancellatlas/project-catalogue/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Project Catalogue
+        </a>
+        .
+      </p>
+    </WorkItem>
+    <WorkItem
+      client:load
+      title="Centre for Genomic Regulation"
+      subtitle="RNA Sequencing Analysis tools"
+      iconSrc={crg}
+      iconFallbackSrc={crgJpg}
+      date="September 2019 - September 2020"
+    >
+      <p>
+        Developed two tools for effectively analyzing long read RNA sequencing
+        datasets: <a href="https://github.com/jacobwindsor/tmerge">tmerge</a> and{" "}
+        <a href="https://github.com/jacobwindsor/SQANTIExplorer">SQANTI Explorer</a>.
+        Papers currently being written.
+      </p>
+    </WorkItem>
+    <WorkItem
+      client:load
+      title="Abcam"
+      subtitle="Software Engineer"
+      date="November 2017 - January-2019"
+      iconSrc={abcam}
+      iconFallbackSrc={abcamJpg}
+      right={true}
+    >
+      <p>
+        Responsible for the front-end of{" "}
+        <a href="http://www.abcam.com" target="_blank" rel="noopener noreferrer">abcam.com</a>. Initiated a major
+        modernisation of the front-end to use modern JavaScript practices.
+        Trained other team members in adopting a functional approach to
+        JavaScript programming.
+      </p>
+    </WorkItem>
+    <WorkItem
+      client:load
+      title="Google Summer of Code"
+      subtitle="WikiPathways 'Pathway Presenter'"
+      iconSrc={gsoc}
+      iconFallbackSrc={gsocJpg}
+      date="June 2017 - September 2017"
+    >
+      <p>
+        Successfully passed the Google Summer of Code by completing a three
+        month project to develop a tool for biologists to create presentations
+        of biological pathways on <a href="https://wikipathways.org" target="_blank" rel="noopener noreferrer">WikiPathways</a>{" "}
+        (details: <a href="https://goo.gl/vZWS2H" target="_blank" rel="noopener noreferrer">here</a>).
+      </p>
+    </WorkItem>
+    <WorkItem
+      client:load
+      right={true}
+      title="WikiPathways"
+      subtitle="Improving Educational Capabilities with 'Pathway Stories'"
+      iconSrc={wikipathways}
+      iconFallbackSrc={wikipathwaysJpg}
+      date="January 2017 - June 2017"
+    >
+      <p>
+        Worked with <a href="https://wikipathways.org" target="_blank" rel="noopener noreferrer">WikiPathways</a> to improve the
+        educational capabilities of the pathway diagrams by creating "pathway
+        stories". Was part of bachelor thesis work for Maastricht University
+        and I was awarded <strong>best thesis</strong> and received the{" "}
+        <strong>Student Award</strong> for this work. Thesis can be found{" "}
+        <a href="https://goo.gl/vzx9i4" target="_blank" rel="noopener noreferrer">here</a>.
+      </p>
+    </WorkItem>
+  </div>
+</div>
+<NextSectionArrow sectionName="Contact" client:load />
+
+<style>
+  .timeline {
+    position: relative;
+    overflow: hidden;
+    margin: 2rem 1rem;
+    padding-top: 1rem;
+  }
+
+  .timeline .line {
+    height: 100%;
+    background: white;
+    width: 0.3rem;
+    position: absolute;
+    margin-left: 3rem;
+    transform: translateX(-50%);
+    z-index: 1;
+    margin-top: -1rem;
+  }
+
+  .timeline.two-columns .line {
+    left: 50%;
+    margin-left: 0;
+  }
+
+  .timeline-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline .work-item {
+    z-index: 2;
+    margin-bottom: 1rem;
+  }
+
+  .timeline .work-item .work-item--image {
+    width: 6rem;
+    height: 6rem;
+    background: white;
+    border-radius: 100%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    overflow: hidden;
+  }
+
+  .timeline.two-columns .work-item .work-item--image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline .work-item .work-item--image picture,
+  .timeline .work-item .work-item--image img {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .timeline .work-item .work-item--text {
+    background: white;
+    margin-left: 9rem;
+    color: black;
+    padding: 1rem;
+    border-bottom: 0.3rem solid #d93425;
+    position: relative;
+    transition: all 0.5s ease-out;
+  }
+
+  .timeline.two-columns .work-item--text {
+    width: calc(50% - 9rem);
+    margin-left: 1rem;
+  }
+
+  .timeline.two-columns .work-item:nth-child(odd) .work-item--text {
+    float: right;
+    margin-right: 1rem;
+    margin-left: 0;
+  }
+
+  .timeline .work-item--text .work-item--title {
+    margin: 0.3em 0;
+  }
+
+  .timeline .work-item--text .work-item--subtitle {
+    margin-top: 0;
+    font-size: 0.9em;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+
+  .timeline .work-item .work-item--text .work-item--arrow {
+    width: 0;
+    height: 0;
+    border-top: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
+    border-right: 0.5rem solid white;
+    position: absolute;
+    right: 100%;
+    margin-left: -0.5rem;
+    top: 2.5rem;
+  }
+
+  .timeline.two-columns
+    .work-item:nth-child(even)
+    .work-item--text
+    .work-item--arrow {
+    transform: rotate(180deg);
+    right: 0;
+    margin-right: -0.5rem;
+  }
+
+  .timeline .work-item .work-item--date {
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: 0.8;
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  .timeline.two-columns .work-item--date {
+    position: absolute;
+    top: 2.5rem;
+    color: white;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .timeline.two-columns .work-item:nth-child(odd) .work-item--date {
+    right: 0;
+    margin-right: calc(100% + 12rem);
+    text-align: right;
+  }
+
+  .timeline.two-columns .work-item:nth-child(even) .work-item--date {
+    margin-right: calc(-100% - 12rem);
+    right: 0;
+  }
+
+  .timeline .work-item--text a {
+    color: #d93425;
+    text-decoration: none;
+  }
+
+  .timeline .work-item--text a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 1024px) {
+    .timeline.two-columns .line {
+      margin-left: 3rem;
+      left: auto;
+    }
+
+    .timeline.two-columns .work-item .work-item--image {
+      float: left;
+      position: relative;
+      transform: none;
+      left: auto;
+    }
+
+    .timeline.two-columns .work-item--text {
+      width: auto;
+      margin-left: 9rem;
+      float: none;
+      margin-right: 0;
+    }
+
+    .timeline.two-columns .work-item:nth-child(odd) .work-item--text {
+      float: none;
+      margin-right: 0;
+      margin-left: 9rem;
+    }
+
+    .timeline.two-columns .work-item--date {
+      position: relative;
+      color: black;
+      margin: 0.5rem 0 0 0;
+    }
+
+    .timeline.two-columns .work-item:nth-child(odd) .work-item--date,
+    .timeline.two-columns .work-item:nth-child(even) .work-item--date {
+      margin-right: 0;
+      text-align: left;
+      right: auto;
+    }
+  }
+</style>
+

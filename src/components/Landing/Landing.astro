@@ -1,0 +1,73 @@
+---
+import profile from './profile.webp';
+import profileJpg from './profile.jpg';
+import NextSectionArrow from '../NextSectionArrow/NextSectionArrow';
+import SectionHeading from '../SectionHeading/SectionHeading';
+import SocialButtons from '../SocialButtons/SocialButtons';
+import TypeWriter from './TypeWriter';
+import './index.css';
+---
+
+<div class="landing">
+  <div class="landing-content">
+    <div class="avatar">
+      <picture>
+        <source srcset={profile} type="image/webp" />
+        <img src={profileJpg} alt="Jacob Windsor" />
+      </picture>
+    </div>
+    <SectionHeading heading="Jacob Windsor" uppercase={false} thickness="0.3rem" fontSize="2.8rem" />
+    <TypeWriter client:load text="Making scientific research faster, easier, & more accessible." />
+    <SocialButtons />
+  </div>
+  <a href="mailto:me@jcbwndsr.com" class="contact-button">Get in touch</a>
+  <NextSectionArrow sectionName="Skills" client:load />
+</div>
+
+<style>
+  .landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .landing-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 250px;
+    height: 250px;
+    border: 6px solid #021226;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .contact-button {
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    background: #d93425;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .contact-button:hover {
+    background: #b82a1d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(217, 52, 37, 0.4);
+  }
+</style>
+
