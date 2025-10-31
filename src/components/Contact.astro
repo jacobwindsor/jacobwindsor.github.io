@@ -11,9 +11,6 @@ import { Mail, Github, Linkedin } from 'lucide-react';
         Get in Touch
       </h2>
       <div class="w-12 h-px bg-primary mx-auto mb-6"></div>
-      <p class="text-base text-muted-foreground max-w-2xl mx-auto font-light">
-        Interested in building scalable solutions for life sciences? Let's connect.
-      </p>
     </div>
 
     <Card className="border border-border/50 bg-card">
@@ -26,9 +23,9 @@ import { Mail, Github, Linkedin } from 'lucide-react';
             </p>
           </div>
 
-          <div class="flex flex-wrap items-center justify-center gap-2.5">
+          <div class="flex flex-wrap items-center justify-center gap-2.5 w-full">
             <Button size="lg" className="px-7" asChild>
-              <a href="mailto:me@jcbwndsr.com">
+              <a href="mailto:me@jcbwndsr.com" class="inline-flex items-center justify-center">
                 <Mail client:load className="mr-2 h-4 w-4" />
                 Contact via Email
               </a>
@@ -44,16 +41,6 @@ import { Mail, Github, Linkedin } from 'lucide-react';
             >
               <Linkedin client:load className="w-4 h-4" />
               <span>LinkedIn</span>
-            </a>
-            <span class="text-muted-foreground/30">·</span>
-            <a 
-              href="https://github.com/jacobwindsor" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm font-medium"
-            >
-              <Github client:load className="w-4 h-4" />
-              <span>GitHub</span>
             </a>
           </div>
         </div>
