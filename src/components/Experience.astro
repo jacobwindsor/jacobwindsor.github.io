@@ -2,6 +2,101 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, MapPin } from 'lucide-react';
+
+interface ExperienceItem {
+  title: string;
+  company: string;
+  location: string;
+  startDate: string;
+  endDate: string | null; // null means "Present"
+  description: string;
+  tags: string[];
+  links?: Array<{ text: string; url: string }>;
+}
+
+const experiences: ExperienceItem[] = [
+  {
+    title: 'Technical Lead',
+    company: 'Axiomatic_AI',
+    location: 'Barcelona, Spain',
+    startDate: 'Feb 2025',
+    endDate: null, // Present
+    description: 'Leading a cross-functional engineering team building Axiomatic\'s AI platform to accelerate scientific research. Combining AI-driven tools with classical software engineering practices such as Domain-Driven Design to drive rapid innovation. Leading the development and deployment of AI & agentic solutions from MVP to production.',
+    tags: [
+      'Technical Leadership',
+      'AI/ML',
+      'MLOps',
+      'Domain-Driven Design',
+      'Software Infrastructure',
+      'Team Management'
+    ]
+  },
+  {
+    title: 'Senior Software Engineer',
+    company: 'Qualifyze',
+    location: 'Barcelona, Spain',
+    startDate: 'Jun 2022',
+    endDate: 'Sep 2024',
+    description: 'Architected and developed scalable backend systems for a pharmaceutical quality management platform. Applied domain-driven design and hexagonal architecture principles to build maintainable, high-performance solutions. Mentored team members on best practices and architectural patterns.',
+    tags: [
+      'Backend Development',
+      'Domain-Driven Design',
+      'Hexagonal Architecture',
+      'TypeScript',
+      'NestJS',
+      'React'
+    ]
+  },
+  {
+    title: 'Software Engineer',
+    company: 'European Bioinformatics Institute (EMBL-EBI)',
+    location: 'Hinxton, England, United Kingdom',
+    startDate: 'Jul 2020',
+    endDate: 'Jun 2022',
+    description: 'Architected and built the <a href="https://www.humancellatlas.org/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">Human Cell Atlas</a> Data Coordination Platform, enabling the ingestion of terabytes of genomic data from laboratories worldwide. Designed horizontally scalable applications using microservice architecture. Initiated and led the modernization of Git workflows and CI/CD processes adopted across the organization.',
+    tags: [
+      'Full-Stack Development',
+      'Microservices',
+      'Kubernetes',
+      'DevOps',
+      'TypeScript',
+      'Java',
+      'Angular',
+      'Python'
+    ]
+  },
+  {
+    title: 'Masters Degree Intern',
+    company: 'Centre for Genomic Regulation',
+    location: 'Barcelona, Spain',
+    startDate: 'Oct 2019',
+    endDate: 'Jul 2020',
+    description: 'Developed bioinformatics tools for third-generation sequencing platforms, including <a href="https://github.com/jacobwindsor/tmerge" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">tmerge</a>, to improve transcriptome analysis accuracy. Designed and implemented computational pipelines using advanced algorithms with Python, Nextflow, R, Snakemake, and Shiny.',
+    tags: [
+      'Bioinformatics',
+      'Python',
+      'R',
+      'Nextflow',
+      'Snakemake',
+      'RNA-Seq Analysis'
+    ]
+  },
+  {
+    title: 'Software Engineer',
+    company: 'Abcam',
+    location: 'Cambridge, United Kingdom',
+    startDate: 'Nov 2017',
+    endDate: 'Dec 2018',
+    description: 'Developed front-end solutions for <a href="http://www.abcam.com" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">abcam.com</a>, serving millions of researchers worldwide. Led a comprehensive front-end modernization initiative, migrating the codebase to Webpack, Babel, and contemporary JavaScript tooling. Established functional programming practices and mentored team members on modern JavaScript development.',
+    tags: [
+      'Frontend Development',
+      'JavaScript',
+      'Webpack',
+      'Functional Programming',
+      'Team Training'
+    ]
+  }
+];
 ---
 
 <section id="experience" class="py-20 px-6 lg:px-8 bg-background">
@@ -16,157 +111,66 @@ import { Calendar, MapPin } from 'lucide-react';
       </p>
     </div>
 
-    <!-- Timeline Container -->
-    <div class="relative">
-      <!-- Timeline Line - Only visible on desktop -->
-      <div class="hidden lg:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-px bg-border/40"></div>
+            <!-- Timeline Container -->
+            <div class="relative">
+              <!-- Timeline Line - Only visible on desktop -->
+              <div class="hidden lg:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-border/40"></div>
 
-      <!-- Timeline Items -->
-      <div class="space-y-10 lg:space-y-12">
-        <!-- Human Cell Atlas - Current/Most Recent -->
-        <div class="relative flex items-center timeline-item">
-          <!-- Timeline Dot -->
-          <div class="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 z-10 w-3 h-3 rounded-full bg-primary border-2 border-background timeline-dot"></div>
-          
-          <!-- Content Card -->
-          <div class="w-full lg:w-[calc(50%-2rem)] lg:ml-auto lg:pl-8">
-            <Card className="border border-border/50 hover:border-primary/30 transition-colors bg-card">
-              <CardHeader>
-                <div class="space-y-3">
-                  <div class="flex items-start justify-between gap-4">
-                    <div class="flex-1">
-                      <div class="flex items-center gap-2 mb-1.5">
-                        <span class="text-xs font-medium text-primary uppercase tracking-wide">Present</span>
+              <!-- Timeline Items -->
+              <div class="space-y-10 lg:space-y-12">
+                {experiences.map((experience, index) => {
+                  const isCurrent = experience.endDate === null;
+                  const isRight = index % 2 === 0; // Alternate: right, left, right, ...
+                  const delayClass = index === 0 ? '' : index === 1 ? 'timeline-item-delay-1' : 'timeline-item-delay-2';
+                  
+                  return (
+                    <div class={`relative flex items-center timeline-item ${delayClass}`}>
+                      <!-- Timeline Dot -->
+                      <div class={`hidden lg:flex absolute left-1/2 top-1/2 z-10 w-3 h-3 rounded-full border-2 border-background timeline-dot ${isCurrent ? 'bg-primary' : 'bg-border/60'}`}></div>
+              
+              <!-- Content Card -->
+              <div class={`w-full lg:w-[calc(50%-2rem)] ${isRight ? 'lg:ml-auto lg:pl-8' : 'lg:pr-8'}`}>
+                <Card className="border border-border/50 hover:border-primary/30 transition-colors bg-card">
+                  <CardHeader>
+                    <div class="space-y-3">
+                      <div class="flex items-start justify-between gap-4">
+                        <div class="flex-1">
+                          {isCurrent && (
+                            <div class="flex items-center gap-2 mb-1.5">
+                              <span class="text-xs font-medium text-primary uppercase tracking-wide">Present</span>
+                            </div>
+                          )}
+                          <CardTitle className="text-lg font-semibold mb-1">{experience.title}</CardTitle>
+                          <CardDescription className="text-sm font-medium text-foreground/80">
+                            {experience.company}
+                          </CardDescription>
+                        </div>
                       </div>
-                      <CardTitle className="text-lg font-semibold mb-1">Software Engineer</CardTitle>
-                      <CardDescription className="text-sm font-medium text-foreground/80">
-                        Human Cell Atlas | European Bioinformatics Institute (EMBL-EBI)
-                      </CardDescription>
+                      <div class="flex flex-wrap items-center gap-4 text-sm text-muted-foreground pt-2 border-t border-border/50">
+                        <div class="flex items-center gap-2">
+                          <Calendar client:load className="w-3.5 h-3.5" />
+                          <span>{experience.startDate} - {isCurrent ? 'Present' : experience.endDate}</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <MapPin client:load className="w-3.5 h-3.5" />
+                          <span>{experience.location}</span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="flex flex-wrap items-center gap-4 text-sm text-muted-foreground pt-2 border-t border-border/50">
-                    <div class="flex items-center gap-2">
-                      <Calendar client:load className="w-3.5 h-3.5" />
-                      <span>Oct 2020 - Present</span>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p class="text-sm text-muted-foreground leading-relaxed font-light" set:html={experience.description} />
+                    <div class="flex flex-wrap gap-2">
+                      {experience.tags.map((tag) => (
+                        <Badge variant="secondary" className="text-xs">{tag}</Badge>
+                      ))}
                     </div>
-                    <div class="flex items-center gap-2">
-                      <MapPin client:load className="w-3.5 h-3.5" />
-                      <span>Cambridge, UK</span>
-                    </div>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p class="text-sm text-muted-foreground leading-relaxed font-light">
-                  Leading engineering efforts for the Data Coordination Platform of the <a href="https://www.humancellatlas.org/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">Human Cell Atlas</a> — a global initiative creating comprehensive reference maps of all human cells. Building scalable infrastructure that processes petabytes of single-cell genomics data and supports thousands of researchers worldwide.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="text-xs">Full-Stack Development</Badge>
-                  <Badge variant="secondary" className="text-xs">Data Platform Architecture</Badge>
-                  <Badge variant="secondary" className="text-xs">Kubernetes</Badge>
-                  <Badge variant="secondary" className="text-xs">Cloud Infrastructure</Badge>
-                  <Badge variant="secondary" className="text-xs">CI/CD</Badge>
-                  <Badge variant="secondary" className="text-xs">TypeScript</Badge>
-                  <Badge variant="secondary" className="text-xs">Java</Badge>
-                  <Badge variant="secondary" className="text-xs">Angular</Badge>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-
-        <!-- CRG -->
-        <div class="relative flex items-center timeline-item timeline-item-delay-1">
-          <!-- Timeline Dot -->
-          <div class="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 z-10 w-3 h-3 rounded-full bg-border/60 border-2 border-background timeline-dot"></div>
-          
-          <!-- Content Card -->
-          <div class="w-full lg:w-[calc(50%-2rem)] lg:pr-8">
-            <Card className="border border-border/50 hover:border-primary/30 transition-colors bg-card">
-              <CardHeader>
-                <div class="space-y-3">
-                  <div class="flex items-start justify-between gap-4">
-                    <div class="flex-1">
-                      <CardTitle className="text-lg font-semibold mb-1">Bioinformatics Researcher</CardTitle>
-                      <CardDescription className="text-sm font-medium text-foreground/80">
-                        Centre for Genomic Regulation
-                      </CardDescription>
-                    </div>
-                  </div>
-                  <div class="flex flex-wrap items-center gap-4 text-sm text-muted-foreground pt-2 border-t border-border/50">
-                    <div class="flex items-center gap-2">
-                      <Calendar client:load className="w-3.5 h-3.5" />
-                      <span>Sep 2019 - Sep 2020</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                      <MapPin client:load className="w-3.5 h-3.5" />
-                      <span>Barcelona, Spain</span>
-                    </div>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p class="text-sm text-muted-foreground leading-relaxed font-light">
-                  Developed innovative tools for long-read RNA sequencing analysis, creating <a href="https://github.com/jacobwindsor/tmerge" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">tmerge</a> and <a href="https://github.com/jacobwindsor/SQANTIExplorer" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">SQANTI Explorer</a>. Built scalable bioinformatics pipelines that improved transcriptome analysis accuracy. Work published in peer-reviewed journals.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="text-xs">Bioinformatics</Badge>
-                  <Badge variant="secondary" className="text-xs">Python</Badge>
-                  <Badge variant="secondary" className="text-xs">R</Badge>
-                  <Badge variant="secondary" className="text-xs">Nextflow</Badge>
-                  <Badge variant="secondary" className="text-xs">RNA-Seq Analysis</Badge>
-                  <Badge variant="secondary" className="text-xs">Docker</Badge>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-
-        <!-- Abcam -->
-        <div class="relative flex items-center timeline-item timeline-item-delay-2">
-          <!-- Timeline Dot -->
-          <div class="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 z-10 w-3 h-3 rounded-full bg-border/60 border-2 border-background timeline-dot"></div>
-          
-          <!-- Content Card -->
-          <div class="w-full lg:w-[calc(50%-2rem)] lg:ml-auto lg:pl-8">
-            <Card className="border border-border/50 hover:border-primary/30 transition-colors bg-card">
-              <CardHeader>
-                <div class="space-y-3">
-                  <div class="flex items-start justify-between gap-4">
-                    <div class="flex-1">
-                      <CardTitle className="text-lg font-semibold mb-1">Software Engineer</CardTitle>
-                      <CardDescription className="text-sm font-medium text-foreground/80">
-                        Abcam
-                      </CardDescription>
-                    </div>
-                  </div>
-                  <div class="flex flex-wrap items-center gap-4 text-sm text-muted-foreground pt-2 border-t border-border/50">
-                    <div class="flex items-center gap-2">
-                      <Calendar client:load className="w-3.5 h-3.5" />
-                      <span>Nov 2017 - Jan 2019</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                      <MapPin client:load className="w-3.5 h-3.5" />
-                      <span>Cambridge, UK</span>
-                    </div>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p class="text-sm text-muted-foreground leading-relaxed font-light">
-                  Led front-end modernization for <a href="http://www.abcam.com" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">abcam.com</a>, a platform serving millions of researchers. Architected and implemented modern JavaScript practices, migrating to Webpack and introducing functional programming patterns. Mentored team members and established engineering best practices.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="text-xs">Frontend Architecture</Badge>
-                  <Badge variant="secondary" className="text-xs">JavaScript</Badge>
-                  <Badge variant="secondary" className="text-xs">React</Badge>
-                  <Badge variant="secondary" className="text-xs">Webpack</Badge>
-                  <Badge variant="secondary" className="text-xs">Team Leadership</Badge>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   </div>
@@ -229,13 +233,13 @@ import { Calendar, MapPin } from 'lucide-react';
   /* Timeline dot animation */
   .timeline-dot {
     opacity: 0;
-    transform: scale(0);
+    transform: translate(-50%, -50%) scale(0);
     transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .timeline-item.is-visible .timeline-dot {
     opacity: 1;
-    transform: scale(1);
+    transform: translate(-50%, -50%) scale(1);
     transition-delay: 0.3s;
   }
 </style>
