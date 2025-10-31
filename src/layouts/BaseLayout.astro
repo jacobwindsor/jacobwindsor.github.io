@@ -4,12 +4,23 @@ import "../styles/globals.css";
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  url?: string;
+  type?: string;
 }
 
 const {
   title = "Jacob Windsor - Technical Leader | Life Sciences Engineering",
   description = "Technical leader with years of experience building scalable engineering solutions in the life sciences. Specializing in bioinformatics, data platforms, and scientific software.",
+  image = "/images/profile.jpg",
+  url = "https://jacobwindsor.github.io",
+  type = "website",
 } = Astro.props;
+
+// Construct full image URL
+const siteUrl = "https://jacobwindsor.github.io";
+const ogImage = image.startsWith("http") ? image : `${siteUrl}${image.startsWith("/") ? image : `/${image}`}`;
+const ogUrl = url.startsWith("http") ? url : `${siteUrl}${url.startsWith("/") ? url : `/${url}`}`;
 ---
 
 <!doctype html>
@@ -30,6 +41,24 @@ const {
     />
     <meta name="robots" content="index, follow" />
     <title>{title}</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Jacob Windsor" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={ogUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    
     <slot name="head" />
   </head>
   <body class="antialiased bg-background text-foreground">
