@@ -1,8 +1,8 @@
 ---
 import { Card, CardContent } from '@/components/ui/card';
 import { Code2, Database, GitBranch, TrendingUp } from 'lucide-react';
-import climbing from './images/climbing.webp';
-import climbingJpg from './images/climbing.jpg';
+import paragliding from './images/paragliding.webp';
+import paraglidingJpg from './images/paragliding.jpg';
 ---
 
 <section id="about" class="py-20 px-6 lg:px-8 bg-background">
@@ -20,16 +20,19 @@ import climbingJpg from './images/climbing.jpg';
           With years of experience in the life sciences domain, I specialize in transforming complex scientific challenges into scalable engineering solutions. My work focuses on building robust data platforms, bioinformatics tools, and infrastructure that enables groundbreaking research.
         </p>
         <p class="text-sm text-muted-foreground leading-relaxed font-light">
-          As a technical leader, I combine deep domain expertise in genomics and bioinformatics with modern software engineering practices. I've built systems that process petabytes of biological data, designed platforms supporting thousands of researchers worldwide, and led teams to deliver high-impact solutions that accelerate scientific discovery.
+          I combine deep domain expertise in genomics and bioinformatics with modern software engineering practices. I've built systems that process petabytes of biological data, designed platforms supporting thousands of researchers worldwide, and led teams to deliver high-impact solutions that accelerate scientific discovery.
+        </p>
+        <p class="text-sm text-muted-foreground leading-relaxed font-light">
+            Outside of work, I'm passionate about monuntain sports.
         </p>
       </div>
       
       <div class="relative rounded-md overflow-hidden border border-border/50 bg-card">
         <picture>
-          <source srcset={climbing.src} type="image/webp" />
+          <source srcset={paragliding.src} type="image/webp" />
           <img 
-            src={climbingJpg.src}
-            alt="Personal interests"
+            src={paraglidingJpg.src}
+            alt="Paragliding"
             class="w-full h-auto object-cover"
           />
         </picture>
