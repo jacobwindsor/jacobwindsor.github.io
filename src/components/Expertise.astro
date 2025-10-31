@@ -1,0 +1,89 @@
+---
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+---
+
+<section id="expertise" class="py-20 px-4 bg-background/50">
+  <div class="container mx-auto max-w-6xl">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+        Technical Expertise
+      </h2>
+      <div class="w-24 h-1 bg-primary rounded-full mx-auto mb-6"></div>
+      <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+        Technologies and practices for building scalable life sciences solutions
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <Card className="border-2 hover:border-primary/50 transition-colors bg-card/50 backdrop-blur-sm">
+        <CardHeader>
+          <CardTitle className="text-2xl">Languages & Frameworks</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div class="flex flex-wrap gap-2">
+            <Badge className="text-sm px-3 py-1">JavaScript/TypeScript</Badge>
+            <Badge className="text-sm px-3 py-1">Python</Badge>
+            <Badge className="text-sm px-3 py-1">Java</Badge>
+            <Badge className="text-sm px-3 py-1">R</Badge>
+            <Badge className="text-sm px-3 py-1">React</Badge>
+            <Badge className="text-sm px-3 py-1">Angular</Badge>
+            <Badge className="text-sm px-3 py-1">Node.js</Badge>
+            <Badge className="text-sm px-3 py-1">Nextflow</Badge>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="border-2 hover:border-primary/50 transition-colors bg-card/50 backdrop-blur-sm">
+        <CardHeader>
+          <CardTitle className="text-2xl">Infrastructure & DevOps</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div class="flex flex-wrap gap-2">
+            <Badge className="text-sm px-3 py-1">Kubernetes</Badge>
+            <Badge className="text-sm px-3 py-1">Docker</Badge>
+            <Badge className="text-sm px-3 py-1">AWS</Badge>
+            <Badge className="text-sm px-3 py-1">GitLab CI/CD</Badge>
+            <Badge className="text-sm px-3 py-1">Helm</Badge>
+            <Badge className="text-sm px-3 py-1">Terraform</Badge>
+            <Badge className="text-sm px-3 py-1">Prometheus</Badge>
+            <Badge className="text-sm px-3 py-1">Grafana</Badge>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="border-2 hover:border-primary/50 transition-colors bg-card/50 backdrop-blur-sm">
+        <CardHeader>
+          <CardTitle className="text-2xl">Data & Bioinformatics</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div class="flex flex-wrap gap-2">
+            <Badge className="text-sm px-3 py-1">Genomics Data</Badge>
+            <Badge className="text-sm px-3 py-1">RNA-Seq Analysis</Badge>
+            <Badge className="text-sm px-3 py-1">Data Pipelines</Badge>
+            <Badge className="text-sm px-3 py-1">Scalable Architecture</Badge>
+            <Badge className="text-sm px-3 py-1">Data Platforms</Badge>
+            <Badge className="text-sm px-3 py-1">Bioinformatics Tools</Badge>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="border-2 hover:border-primary/50 transition-colors bg-card/50 backdrop-blur-sm">
+        <CardHeader>
+          <CardTitle className="text-2xl">Leadership & Practices</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div class="flex flex-wrap gap-2">
+            <Badge className="text-sm px-3 py-1">Technical Leadership</Badge>
+            <Badge className="text-sm px-3 py-1">System Design</Badge>
+            <Badge className="text-sm px-3 py-1">Architecture</Badge>
+            <Badge className="text-sm px-3 py-1">Code Review</Badge>
+            <Badge className="text-sm px-3 py-1">Mentoring</Badge>
+            <Badge className="text-sm px-3 py-1">Best Practices</Badge>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
+

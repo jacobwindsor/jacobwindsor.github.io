@@ -1,0 +1,132 @@
+---
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Calendar, MapPin } from 'lucide-react';
+---
+
+<section id="experience" class="py-20 px-4 bg-background/30">
+  <div class="container mx-auto max-w-6xl">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+        Experience
+      </h2>
+      <div class="w-24 h-1 bg-primary rounded-full mx-auto mb-6"></div>
+      <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+        Building scalable engineering solutions in life sciences
+      </p>
+    </div>
+
+    <div class="space-y-8">
+      <!-- Human Cell Atlas -->
+      <Card className="border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 bg-card/50 backdrop-blur-sm">
+        <CardHeader>
+          <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+            <div>
+              <CardTitle className="text-2xl mb-2">Software Engineer</CardTitle>
+              <CardDescription className="text-lg font-medium">
+                Human Cell Atlas | European Bioinformatics Institute (EMBL-EBI)
+              </CardDescription>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+              <div class="flex items-center gap-2">
+                <Calendar client:load className="w-4 h-4" />
+                <span>Oct 2020 - Present</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <MapPin client:load className="w-4 h-4" />
+                <span>Cambridge, UK</span>
+              </div>
+            </div>
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p class="text-muted-foreground leading-relaxed">
+            Leading engineering efforts for the Data Coordination Platform of the <a href="https://www.humancellatlas.org/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Human Cell Atlas</a> — a global initiative creating comprehensive reference maps of all human cells. Building scalable infrastructure that processes petabytes of single-cell genomics data and supports thousands of researchers worldwide.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <Badge variant="secondary">Full-Stack Development</Badge>
+            <Badge variant="secondary">Data Platform Architecture</Badge>
+            <Badge variant="secondary">Kubernetes</Badge>
+            <Badge variant="secondary">Cloud Infrastructure</Badge>
+            <Badge variant="secondary">CI/CD</Badge>
+            <Badge variant="secondary">TypeScript</Badge>
+            <Badge variant="secondary">Java</Badge>
+            <Badge variant="secondary">Angular</Badge>
+          </div>
+        </CardContent>
+      </Card>
+
+      <!-- CRG -->
+      <Card className="border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 bg-card/50 backdrop-blur-sm">
+        <CardHeader>
+          <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+            <div>
+              <CardTitle className="text-2xl mb-2">Bioinformatics Researcher</CardTitle>
+              <CardDescription className="text-lg font-medium">
+                Centre for Genomic Regulation
+              </CardDescription>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+              <div class="flex items-center gap-2">
+                <Calendar className="w-4 h-4" />
+                <span>Sep 2019 - Sep 2020</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                <span>Barcelona, Spain</span>
+              </div>
+            </div>
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p class="text-muted-foreground leading-relaxed">
+            Developed innovative tools for long-read RNA sequencing analysis, creating <a href="https://github.com/jacobwindsor/tmerge" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">tmerge</a> and <a href="https://github.com/jacobwindsor/SQANTIExplorer" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">SQANTI Explorer</a>. Built scalable bioinformatics pipelines that improved transcriptome analysis accuracy. Work published in peer-reviewed journals.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <Badge variant="secondary">Bioinformatics</Badge>
+            <Badge variant="secondary">Python</Badge>
+            <Badge variant="secondary">R</Badge>
+            <Badge variant="secondary">Nextflow</Badge>
+            <Badge variant="secondary">RNA-Seq Analysis</Badge>
+            <Badge variant="secondary">Docker</Badge>
+          </div>
+        </CardContent>
+      </Card>
+
+      <!-- Abcam -->
+      <Card className="border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 bg-card/50 backdrop-blur-sm">
+        <CardHeader>
+          <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+            <div>
+              <CardTitle className="text-2xl mb-2">Software Engineer</CardTitle>
+              <CardDescription className="text-lg font-medium">Abcam</CardDescription>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+              <div class="flex items-center gap-2">
+                <Calendar className="w-4 h-4" />
+                <span>Nov 2017 - Jan 2019</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                <span>Cambridge, UK</span>
+              </div>
+            </div>
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p class="text-muted-foreground leading-relaxed">
+            Led front-end modernization for <a href="http://www.abcam.com" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">abcam.com</a>, a platform serving millions of researchers. Architected and implemented modern JavaScript practices, migrating to Webpack and introducing functional programming patterns. Mentored team members and established engineering best practices.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <Badge variant="secondary">Frontend Architecture</Badge>
+            <Badge variant="secondary">JavaScript</Badge>
+            <Badge variant="secondary">React</Badge>
+            <Badge variant="secondary">Webpack</Badge>
+            <Badge variant="secondary">Team Leadership</Badge>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,89 @@
+---
+import { Card, CardContent } from '@/components/ui/card';
+import { Code2, Database, GitBranch, TrendingUp } from 'lucide-react';
+import climbing from './images/climbing.webp';
+import climbingJpg from './images/climbing.jpg';
+---
+
+<section id="about" class="py-20 px-4 bg-background/50">
+  <div class="container mx-auto max-w-6xl">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+        About
+      </h2>
+      <div class="w-24 h-1 bg-primary rounded-full mx-auto mb-6"></div>
+      <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+        A technical leader passionate about building scalable engineering solutions in life sciences
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      <Card className="border-2 hover:border-primary/50 transition-colors bg-card/50 backdrop-blur-sm">
+        <CardContent className="p-6 text-center space-y-3">
+          <div class="inline-flex p-3 rounded-lg bg-primary/10 border border-primary/20 mb-2">
+            <Code2 client:load className="w-8 h-8 text-primary" />
+          </div>
+          <h3 class="text-lg font-semibold text-foreground">Engineering Excellence</h3>
+          <p class="text-sm text-muted-foreground">Building robust, maintainable systems that scale</p>
+        </CardContent>
+      </Card>
+
+      <Card className="border-2 hover:border-primary/50 transition-colors bg-card/50 backdrop-blur-sm">
+        <CardContent className="p-6 text-center space-y-3">
+          <div class="inline-flex p-3 rounded-lg bg-primary/10 border border-primary/20 mb-2">
+            <Database client:load className="w-8 h-8 text-primary" />
+          </div>
+          <h3 class="text-lg font-semibold text-foreground">Data Platforms</h3>
+          <p class="text-sm text-muted-foreground">Designing scalable data infrastructure for scientific research</p>
+        </CardContent>
+      </Card>
+
+      <Card className="border-2 hover:border-primary/50 transition-colors bg-card/50 backdrop-blur-sm">
+        <CardContent className="p-6 text-center space-y-3">
+          <div class="inline-flex p-3 rounded-lg bg-primary/10 border border-primary/20 mb-2">
+            <GitBranch client:load className="w-8 h-8 text-primary" />
+          </div>
+          <h3 class="text-lg font-semibold text-foreground">Life Sciences</h3>
+          <p class="text-sm text-muted-foreground">Deep domain expertise in bioinformatics and genomics</p>
+        </CardContent>
+      </Card>
+
+      <Card className="border-2 hover:border-primary/50 transition-colors bg-card/50 backdrop-blur-sm">
+        <CardContent className="p-6 text-center space-y-3">
+          <div class="inline-flex p-3 rounded-lg bg-primary/10 border border-primary/20 mb-2">
+            <TrendingUp client:load className="w-8 h-8 text-primary" />
+          </div>
+          <h3 class="text-lg font-semibold text-foreground">Technical Leadership</h3>
+          <p class="text-sm text-muted-foreground">Leading teams to deliver high-impact solutions</p>
+        </CardContent>
+      </Card>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <p class="text-lg text-muted-foreground leading-relaxed">
+          With years of experience in the life sciences domain, I specialize in transforming complex scientific challenges into scalable engineering solutions. My work focuses on building robust data platforms, bioinformatics tools, and infrastructure that enables groundbreaking research.
+        </p>
+        <p class="text-lg text-muted-foreground leading-relaxed">
+          As a technical leader, I combine deep domain expertise in genomics and bioinformatics with modern software engineering practices. I've built systems that process petabytes of biological data, designed platforms supporting thousands of researchers worldwide, and led teams to deliver high-impact solutions that accelerate scientific discovery.
+        </p>
+        <p class="text-lg text-muted-foreground leading-relaxed">
+          In my spare time I love to climb, build real-world things (not just software), and travel around in my campervan.
+        </p>
+      </div>
+      
+      <div class="relative rounded-xl overflow-hidden border-2 border-primary/20 shadow-2xl group">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+        <picture>
+          <source srcset={climbing.src} type="image/webp" />
+          <img 
+            src={climbingJpg.src}
+            alt="Climbing"
+            class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
