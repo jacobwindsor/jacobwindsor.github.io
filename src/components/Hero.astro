@@ -1,18 +1,22 @@
 ---
-import { ArrowDown, Mail, Github, Linkedin } from 'lucide-react';
-import profile from './images/profile.webp';
-import profileJpg from './images/profile.jpg';
-import { DownloadCVButton } from './DownloadCVButton';
+import { ArrowDown, Mail, Github, Linkedin } from "lucide-react";
+import profile from "./images/profile.webp";
+import profileJpg from "./images/profile.jpg";
+import { DownloadCVButton } from "./DownloadCVButton";
 ---
 
-<section class="relative min-h-screen flex items-center justify-center px-6 py-20 lg:px-8 overflow-hidden bg-background">
+<section
+  class="relative min-h-screen flex items-center justify-center px-6 py-20 lg:px-8 overflow-hidden bg-background"
+>
   <div class="container mx-auto max-w-6xl relative z-10">
     <div class="flex flex-col lg:flex-row items-center gap-14 lg:gap-16">
       <div class="relative flex-shrink-0">
-        <div class="relative w-56 h-56 lg:w-64 lg:h-64 rounded-md border border-border/50 overflow-hidden bg-card">
+        <div
+          class="relative w-56 h-56 lg:w-64 lg:h-64 rounded-md border border-border/50 overflow-hidden bg-card"
+        >
           <picture>
             <source srcset={profile.src} type="image/webp" />
-            <img 
+            <img
               src={profileJpg.src}
               alt="Jacob Windsor"
               class="w-full h-full object-cover"
@@ -24,21 +28,28 @@ import { DownloadCVButton } from './DownloadCVButton';
       <div class="flex-1 text-center lg:text-left space-y-7">
         <div class="space-y-4">
           <div>
-            <h1 class="text-5xl lg:text-6xl font-semibold tracking-tight text-foreground mb-3">
+            <h1
+              class="text-5xl lg:text-6xl font-semibold tracking-tight text-foreground mb-3"
+            >
               Jacob Windsor
             </h1>
           </div>
         </div>
 
-        <p class="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light">
-          Accelerating scientific discovery through scalable engineering solutions.
+        <p
+          class="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light"
+        >
+          Accelerating scientific discovery through scalable engineering
+          solutions.
         </p>
 
-        <div class="flex items-center justify-between pt-5 border-t border-border/50">
+        <div
+          class="flex items-center justify-between pt-5 border-t border-border/50"
+        >
           <div class="flex items-center gap-3 justify-center lg:justify-start">
-            <a 
-              href="https://www.linkedin.com/in/jcbwndsr/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/jcbwndsr/"
+              target="_blank"
               rel="noopener noreferrer"
               class="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm font-medium"
               aria-label="LinkedIn"
@@ -47,7 +58,7 @@ import { DownloadCVButton } from './DownloadCVButton';
               <span>LinkedIn</span>
             </a>
             <span class="text-muted-foreground/30">·</span>
-            <a 
+            <a
               href="mailto:me@jcbwndsr.com"
               class="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm font-medium"
               aria-label="Email"
@@ -62,37 +73,40 @@ import { DownloadCVButton } from './DownloadCVButton';
     </div>
   </div>
 
-  <a 
-    href="#about" 
+  <a
+    href="#about"
     id="scroll-indicator"
     class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 cursor-pointer hover:opacity-70 transition-all duration-300 opacity-100"
     aria-label="Scroll to next section"
   >
-    <ArrowDown client:load className="scroll-indicator w-8 h-8 text-muted-foreground/50" />
+    <ArrowDown
+      client:load
+      className="scroll-indicator w-8 h-8 text-muted-foreground/50"
+    />
   </a>
 </section>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const scrollIndicator = document.getElementById('scroll-indicator');
-    
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollIndicator = document.getElementById("scroll-indicator");
+
     if (!scrollIndicator) return;
-    
+
     const fadeThreshold = window.innerHeight * 0.1;
-    
+
     const handleScroll = () => {
       if (window.scrollY > fadeThreshold) {
-        scrollIndicator.classList.add('opacity-0', 'pointer-events-none');
-        scrollIndicator.classList.remove('opacity-100');
+        scrollIndicator.classList.add("opacity-0", "pointer-events-none");
+        scrollIndicator.classList.remove("opacity-100");
       } else {
-        scrollIndicator.classList.remove('opacity-0', 'pointer-events-none');
-        scrollIndicator.classList.add('opacity-100');
+        scrollIndicator.classList.remove("opacity-0", "pointer-events-none");
+        scrollIndicator.classList.add("opacity-100");
       }
     };
-    
+
     handleScroll();
-    
-    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
   });
 </script>
 
@@ -102,7 +116,8 @@ import { DownloadCVButton } from './DownloadCVButton';
   }
 
   @keyframes pulse {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 0.5;
       transform: translateY(0);
     }
@@ -112,4 +127,3 @@ import { DownloadCVButton } from './DownloadCVButton';
     }
   }
 </style>
-

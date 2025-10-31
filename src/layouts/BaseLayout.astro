@@ -1,14 +1,14 @@
 ---
-import '../styles/globals.css';
+import "../styles/globals.css";
 
 interface Props {
   title?: string;
   description?: string;
 }
 
-const { 
-  title = "Jacob Windsor - Technical Leader | Life Sciences Engineering", 
-  description = "Technical leader with years of experience building scalable engineering solutions in the life sciences. Specializing in bioinformatics, data platforms, and scientific software." 
+const {
+  title = "Jacob Windsor - Technical Leader | Life Sciences Engineering",
+  description = "Technical leader with years of experience building scalable engineering solutions in the life sciences. Specializing in bioinformatics, data platforms, and scientific software.",
 } = Astro.props;
 ---
 
@@ -24,7 +24,10 @@ const {
     <link rel="manifest" href="/manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <meta name="robots" content="index, follow" />
     <title>{title}</title>
     <slot name="head" />
@@ -32,13 +35,13 @@ const {
   <body class="antialiased bg-background text-foreground">
     <slot />
     <!-- Simple analytics tracking -->
-    <script
-      async
-      defer
-      src="https://scripts.simpleanalyticscdn.com/latest.js"
+    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"
     ></script>
     <noscript
-      ><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
-    /></noscript>
+      ><img
+        src="https://queue.simpleanalyticscdn.com/noscript.gif"
+        alt=""
+      /></noscript
+    >
   </body>
 </html>

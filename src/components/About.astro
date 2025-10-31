@@ -1,14 +1,16 @@
 ---
-import { Card, CardContent } from '@/components/ui/card';
-import { Code2, Database, GitBranch, TrendingUp } from 'lucide-react';
-import paragliding from './images/paragliding.webp';
-import paraglidingJpg from './images/paragliding.jpg';
+import { Card, CardContent } from "@/components/ui/card";
+import { Code2, Database, GitBranch, TrendingUp } from "lucide-react";
+import paragliding from "./images/paragliding.webp";
+import paraglidingJpg from "./images/paragliding.jpg";
 ---
 
 <section id="about" class="py-20 px-6 lg:px-8 bg-background">
   <div class="container mx-auto max-w-6xl">
     <div class="text-center mb-16">
-      <h2 class="text-4xl lg:text-5xl font-semibold mb-4 text-foreground tracking-tight">
+      <h2
+        class="text-4xl lg:text-5xl font-semibold mb-4 text-foreground tracking-tight"
+      >
         About
       </h2>
       <div class="w-12 h-px bg-primary mx-auto mb-6"></div>
@@ -17,20 +19,30 @@ import paraglidingJpg from './images/paragliding.jpg';
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div class="space-y-5">
         <p class="text-sm text-muted-foreground leading-relaxed font-light">
-          With years of experience in the life sciences domain, I specialize in transforming complex scientific challenges into scalable engineering solutions. My work focuses on building robust data platforms, bioinformatics tools, and infrastructure that enables groundbreaking research.
+          With years of experience in the life sciences domain, I specialize in
+          transforming complex scientific challenges into scalable engineering
+          solutions. My work focuses on building robust data platforms,
+          bioinformatics tools, and infrastructure that enables groundbreaking
+          research.
         </p>
         <p class="text-sm text-muted-foreground leading-relaxed font-light">
-          I combine deep domain expertise in genomics and bioinformatics with modern software engineering practices. I've built systems that process petabytes of biological data, designed platforms supporting thousands of researchers worldwide, and led teams to deliver high-impact solutions that accelerate scientific discovery.
+          I combine deep domain expertise in genomics and bioinformatics with
+          modern software engineering practices. I've built systems that process
+          petabytes of biological data, designed platforms supporting thousands
+          of researchers worldwide, and led teams to deliver high-impact
+          solutions that accelerate scientific discovery.
         </p>
         <p class="text-sm text-muted-foreground leading-relaxed font-light">
-            Outside of work, I'm passionate about monuntain sports.
+          Outside of work, I'm passionate about monuntain sports.
         </p>
       </div>
-      
-      <div class="relative rounded-md overflow-hidden border border-border/50 bg-card">
+
+      <div
+        class="relative rounded-md overflow-hidden border border-border/50 bg-card"
+      >
         <picture>
           <source srcset={paragliding.src} type="image/webp" />
-          <img 
+          <img
             src={paraglidingJpg.src}
             alt="Paragliding"
             class="w-full h-auto object-cover"
@@ -40,4 +52,3 @@ import paraglidingJpg from './images/paragliding.jpg';
     </div>
   </div>
 </section>
-
