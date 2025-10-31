@@ -1,4 +1,5 @@
 /// <reference path="../.astro/types.d.ts" />
+/// <reference types="astro/client" />
 
 declare module '*.jpg' {
   const value: { src: string; width: number; height: number; format: string };
