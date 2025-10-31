@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Button } from "grommet";
 import SectionHeading from "../SectionHeading";
-import SocialButtons from "../SocialButtons";
+import SocialButtons from "../SocialButtons.astro";
 
 const Contact = ({ size }) => (
   <>
