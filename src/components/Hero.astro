@@ -1,8 +1,8 @@
 ---
-import { Button } from '@/components/ui/button';
 import { ArrowDown, Mail, Github, Linkedin } from 'lucide-react';
 import profile from './images/profile.webp';
 import profileJpg from './images/profile.jpg';
+import { DownloadCVButton } from './DownloadCVButton';
 ---
 
 <section class="relative min-h-screen flex items-center justify-center px-6 py-20 lg:px-8 overflow-hidden bg-background">
@@ -34,26 +34,29 @@ import profileJpg from './images/profile.jpg';
           Accelerating scientific discovery through scalable engineering solutions.
         </p>
 
-        <div class="flex items-center gap-3 justify-center lg:justify-start pt-5 border-t border-border/50">
-          <a 
-            href="https://www.linkedin.com/in/jcbwndsr/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm font-medium"
-            aria-label="LinkedIn"
-          >
-            <Linkedin client:load className="w-4 h-4" />
-            <span>LinkedIn</span>
-          </a>
-          <span class="text-muted-foreground/30">·</span>
-          <a 
-            href="mailto:me@jcbwndsr.com"
-            class="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm font-medium"
-            aria-label="Email"
-          >
-            <Mail client:load className="w-4 h-4" />
-            <span>Email</span>
-          </a>
+        <div class="flex items-center justify-between pt-5 border-t border-border/50">
+          <div class="flex items-center gap-3 justify-center lg:justify-start">
+            <a 
+              href="https://www.linkedin.com/in/jcbwndsr/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm font-medium"
+              aria-label="LinkedIn"
+            >
+              <Linkedin client:load className="w-4 h-4" />
+              <span>LinkedIn</span>
+            </a>
+            <span class="text-muted-foreground/30">·</span>
+            <a 
+              href="mailto:me@jcbwndsr.com"
+              class="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm font-medium"
+              aria-label="Email"
+            >
+              <Mail client:load className="w-4 h-4" />
+              <span>Email</span>
+            </a>
+          </div>
+          <DownloadCVButton client:load />
         </div>
       </div>
     </div>
