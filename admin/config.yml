@@ -3,6 +3,7 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
   repo: jacobwindsor/jacobwindsor.github.io # Your GitHub repo
   base_url: https://jcbwndsr.com
+  auth_type: implicit # Use implicit grant - no proxy needed
   commit_messages:
     create: 'Create {{collection}} "{{slug}}"'
     update: 'Update {{collection}} "{{slug}}"'
