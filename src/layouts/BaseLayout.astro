@@ -59,6 +59,22 @@ const ogUrl = url.startsWith("http") ? url : `${siteUrl}${url.startsWith("/") ? 
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
     
+    <!-- Person JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jacob Windsor",
+      "url": ogUrl,
+      "image": ogImage,
+      "jobTitle": "Technical Lead, Life Sciences Engineering",
+      "email": "me@jcbwndsr.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/jcbwndsr/",
+        ogUrl
+      ],
+      "description": description
+    })} />
+    
     <slot name="head" />
   </head>
   <body class="antialiased bg-background text-foreground">
